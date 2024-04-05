@@ -12,5 +12,13 @@
     "id" : "_VXntgPM-Ee655L6abO6FGw",
     "version" : "Latest",
     "type" : "property"
+  }, {
+    "id" : "_CwMp8PM_Ee655L6abO6FGw - ",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_VXntgPM-Ee655L6abO6FGw - city",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 } ]
