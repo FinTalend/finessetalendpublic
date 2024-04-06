@@ -168,6 +168,52 @@
       </column>
     </metadata>
   </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ID"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Name"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CountryCode"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="District"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Population"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="city" name="tLogRow_2">
+      <column comment="" key="true" length="10" name="ID" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="35" name="Name" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="3" name="CountryCode" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="District" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="0" key="false" length="10" name="Population" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
@@ -209,13 +255,6 @@
         <mapperTableEntries expression="row1.District " name="District" type="id_String"/>
         <mapperTableEntries expression="row1.Population " name="Population" type="id_Integer"/>
       </outputTables>
-      <inputTables activateExpressionFilter="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="ID" type="id_Integer"/>
-        <mapperTableEntries name="Name" type="id_String"/>
-        <mapperTableEntries name="CountryCode" type="id_String"/>
-        <mapperTableEntries name="District" type="id_String"/>
-        <mapperTableEntries name="Population" type="id_Integer"/>
-      </inputTables>
     </nodeData>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="96">
@@ -368,7 +407,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tLogRow_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
@@ -385,13 +424,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b7492b4c-45b3-4bb5-ac72-40a486276a84"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>yvPU1iPNjFEAlr2djPM8YxGhck0kcGozt4HLRGtVSVORV5qRDAUVPCglNv6mrsbMMXTZm3SWZUHz&#13;
-H73bpWtQ+g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_01f24ed7-de77-4015-85bd-b5dc00d4d705"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>InvOwMaVTamBg6D6tkoV7rAF8tVMLXp4htp7XMA7uOV00dpamEeOEIfpGyAuds8VOtQ4y0mkOATU&#13;
-/9+6ycQjUQ==</DigestValue></Reference></SignedInfo><SignatureValue>GdzUkJ8YpfbIC7tyc4v7rQn9mEeX3WoylFwT+aKeX6FSulaVEAXaeWyrNbBzMw/pfC3RrROLKLeK&#13;
-wLEG0cfkVsgtV4bfibbI6bR9mmifk6M59mnRnNuQdjbSI9aH4q/ymmnYJHOYne4i3gNoDXBGk/Ll&#13;
-XEJ0UrKjyzcGUowyfh5gNZjs5Efo6jFXiPVK0fHKKKHva/fSnTEDBQtElxk7S+elgzpRas5FS+k6&#13;
-L0lxfB04M9X6CVce71lmUzNY4L5YmZONQXsSXXPKftrjSiledODNsHPkI8RcsYCgtIX/fBOS71tY&#13;
-18gmrdAws+kS2idKRA/hpXPp8asPt8t8Pc0jqw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_710f486e-a496-47f1-89f1-937cba65d1ee"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>r+DUQcw/WbCPVGzp7mC8blmAq16EMxyF19nEYPov1kd4JIcZqB+j72oUNaohIqo0fYWclInUBCL8&#13;
+CJ7Jwh2CcQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8313be41-7105-460b-a9b0-c0bcc2585cb9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+G3DHfUAgAmsoIMKi8xuxO2MncyqSSwYxRXfAy9h+Nv6FGExLq2D+f4HMwcyif8AUSsML60WEV/6&#13;
+KpNWDP+CGQ==</DigestValue></Reference></SignedInfo><SignatureValue>PQf04kw9kMJB4v+dbyajKLAJz3xmm2sU9IJ93UgM31hkSfR2Ty2lMRUB25ZzUA+PNqtOLOD89H7J&#13;
+ogbbtHHRYq9TeZBrdtGGe7eNjdd59iMN3baLWNGLWwswY86Kvgg1lolYi75jW1+/hEr/JFtG9YW2&#13;
+XZ7t7V/uairhemi3M12TrrRkqoGxt1Xs83Qlya6GKyEdQcuC2a9YbLkJW6f9CCiRJRh6DAZgXEf7&#13;
+gi+rHIFuJ6tWqVqc/x8aBbfLoD2yWg6aSYblvTAGcyLEQuwbd7PKdktmA8rADe2m1Jpu7QrI/Hf+&#13;
+ztwknwPiOGU6TZzqRezJ+ts7lkYSrVkPgISJVQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -413,4 +457,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_01f24ed7-de77-4015-85bd-b5dc00d4d705" Target="#_b7492b4c-45b3-4bb5-ac72-40a486276a84"><Timestamp>2024-04-06 12:03:01</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8313be41-7105-460b-a9b0-c0bcc2585cb9" Target="#_710f486e-a496-47f1-89f1-937cba65d1ee"><Timestamp>2024-04-06 12:04:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
