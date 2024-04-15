@@ -28,4 +28,19 @@
     "version" : "Latest",
     "type" : "property"
   } ]
+}, {
+  "baseItem" : {
+    "id" : "_z9ONIPr6Ee66He9BdH0mXQ",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_juWVUPr7Ee66He9BdH0mXQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_juWVUPr7Ee66He9BdH0mXQ - salesSchema",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
 } ]
