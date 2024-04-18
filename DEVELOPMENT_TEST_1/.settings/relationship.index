@@ -34,6 +34,25 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_eAsbgP1XEe6EVYHh9ozNMw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_FsTZ0P1zEe6EVYHh9ozNMw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_FsTZ0P1zEe6EVYHh9ozNMw - employee",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_FsTZ0P1zEe6EVYHh9ozNMw - employee_details",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_erMbgPQLEe66He9BdH0mXQ",
     "version" : "0.1",
     "type" : "job"
