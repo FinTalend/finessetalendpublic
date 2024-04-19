@@ -455,6 +455,9 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="innerjoin_out">
+      <column comment="" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" key="false" length="50" name="first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -490,24 +493,29 @@
       <column comment="" key="false" length="10" name="salary" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="age" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="innerjoin_out" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row2.first_name " name="first_name" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row2.last_name " name="last_name" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row2.email " name="email" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row2.gender " name="gender" nullable="true" type="id_Object"/>
-        <mapperTableEntries expression="row2.salary " name="salary" nullable="true" type="id_BigDecimal"/>
-      </outputTables>
-      <outputTables activateCondensedTool="true" name="joins_rejects" reject="true" rejectInnerJoin="true" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row2.id " name="id" type="id_Integer"/>
         <mapperTableEntries expression="row2.first_name " name="first_name" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row2.last_name " name="last_name" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row2.email " name="email" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row2.gender " name="gender" nullable="true" type="id_Object"/>
         <mapperTableEntries expression="row2.salary " name="salary" nullable="true" type="id_BigDecimal"/>
+      </outputTables>
+      <outputTables name="joins_rejects" reject="true" rejectInnerJoin="true" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row2.id " name="id" type="id_Integer"/>
+        <mapperTableEntries expression="row2.first_name " name="first_name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.last_name " name="last_name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.email " name="email" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.gender " name="gender" nullable="true" type="id_Object"/>
+        <mapperTableEntries expression="row2.salary " name="salary" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row3.age " name="age" nullable="true" type="id_Integer"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
         <mapperTableEntries name="id" type="id_Integer"/>
@@ -594,6 +602,8 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="first_name"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="last_name"/>
@@ -610,6 +620,9 @@
     <elementParameter field="TEXT" name="LABEL" value="Innerjoin"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_2">
+      <column comment="" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" key="false" length="50" name="first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -653,6 +666,8 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="salary"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="age"/>
+      <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
@@ -675,6 +690,9 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="salary" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="age" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
@@ -705,10 +723,20 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <connection connectorName="FLOW" label="innerjoin_out" lineStyle="0" metaname="innerjoin_out" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tLogRow_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="innerjoin_out"/>
   </connection>
   <connection connectorName="FLOW" label="joins_rejects" lineStyle="0" metaname="joins_rejects" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tLogRow_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="age"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="joins_rejects"/>
   </connection>
@@ -728,13 +756,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d549413f-0419-49df-876d-e49aaa64a269"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kj5ogH4b5blTBvORxXFIWTN2ev4sEZUar/bD6/T1VRtGet3GIPldNwcAyk/H+e/PnYbfwyjkjXUi&#13;
-Kc50rZxx4A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_afb0b70e-ea58-4d5c-a647-6fafe09646c2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pvAn5jLWEuYY0UhqxmxK81Eu0jTCVsD5r9oQZ/qxuY5XoPlsxKZM2hcN/eSOBFl02H5vdmSu14sm&#13;
-evs+Sby3aQ==</DigestValue></Reference></SignedInfo><SignatureValue>hfZ/78SBTWoTWLp95qE3oYuFsk+yShfEt3nqyqntKAjl6yWndwgfSAwh6jRcleyXEVSoKDD/Wy21&#13;
-Axuz5lOOfkz4GddObFRP8Ayr7Zj0xa9DR4GwQiV5BtvAJ1JD2T3I7VMkslxcwJm0CtfEe61HkLRe&#13;
-qcRlqwVxpP3BUCCiHXEImf06VBofvkAJxEl1VpIlz6etQMOnUsDIaFp+0o8BqtBLQH9/oIUQEfAJ&#13;
-1T+kaWsEjaGL/lAHRA6mdSRtFjHdf+O3zWCpf8Gbt+B3Q4u4RCUaLHlJTkk1wCO1UPRH4/Y+sENA&#13;
-PNqhipw/Y0MnbPYfXdGMkIsk0UgctgM8qAJ0qw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ceca0e3b-86d9-4545-94be-0ccd21155b05"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DyxYsCCt0XSHJ43x9RSGOFK1p8QVdshvykqElqBPQyzsuowRr7KszloWp1KV15897uHe4tubLMwM&#13;
+iCiefOP8LQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_46dbeffe-5bb5-4f7a-a563-642876a55376"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wu4xQaTAi6p7fnZNg+/ZWSPu1WjMbhcQVBZ3fgbq3wiGN6GYXjLsELr9V2IXUDeN3EdGU4XT2rkG&#13;
+cFnBKyc6FQ==</DigestValue></Reference></SignedInfo><SignatureValue>VpWTGSJk5Z4+HG7qwqSDOzt8xGxMUnQMvKkGKEnQL2Ve33ruay1gVoB0K4AczYprw/3hzXhifNCv&#13;
+J2kxpqnzyOzOxPt7WCSJjOcVUR6noPTZhEnorav7ZFp+dWxG5r68Bb4/GCuqMTPdIkzUjz+jnABO&#13;
+0lRzxievyS3V3GywV/ioNM/t+PwmFmfBB5AQuqExO3Sf6g8tzNfPdSL93sVefn1qKEe8lLhBS8r9&#13;
+9c/zq36mvpFE5hOCgm7aP9Nzlj7Kvn/rgICgdFuwpn25em4ZxHlCOoKAe1G8h1yVjWldxhINtm9k&#13;
+50m3aelo1CgHWqLxje9Ol3AXXYcM30it5sJpVw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -756,4 +784,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_afb0b70e-ea58-4d5c-a647-6fafe09646c2" Target="#_d549413f-0419-49df-876d-e49aaa64a269"><Timestamp>2024-04-19 05:31:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_46dbeffe-5bb5-4f7a-a563-642876a55376" Target="#_ceca0e3b-86d9-4545-94be-0ccd21155b05"><Timestamp>2024-04-19 05:38:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
