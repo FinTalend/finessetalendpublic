@@ -193,7 +193,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="-50" offsetLabelY="0" posX="768" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="context.last_success=TalendDate.formatDate(&quot;'YYYY-MM-DD HH:MM:SS'&quot;,input_row.last_success);&#10;&#10;context.current_run=TalendDate.formatDate(&quot;'YYYY-MM-DD HH:MM:SS'&quot;,TalendDate.getCurrentDate());&#10;&#10;System.out.println(&quot;last success : &quot;+context.last_success);&#10;System.out.println(&quot;current run  : &quot;+context.current_run);&#13;&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.last_success= TalendDate.formatDate(&quot;'YYYY-MM-DD HH:MM:SS'&quot;,input_row.last_success);&#10;&#10;context.current_run=TalendDate.formatDate(&quot;'YYYY-MM-DD HH:MM:SS'&quot;,TalendDate.getCurrentDate());&#10;&#10;System.out.println(&quot;last success : &quot;+context.last_success);&#10;System.out.println(&quot;current run  : &quot;+context.current_run);&#13;&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_1">
@@ -230,14 +230,12 @@
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;finesse&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:NpfkNzyLQrFM8WGeWc9qM+ro4zA4pFaW0X3wTBfOhOHFgRZcTJFvXy7E"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_FsTZ0P1zEe6EVYHh9ozNMw - employee"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;employee&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="SELECT * FROM employee &#13;&#10;WHERE created_on &gt;= '&quot; + context.last_success + &quot;' OR modified_on &gt;= '&quot; + context.last_success + &quot;'"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT * FROM employee &#13;&#10;WHERE created_on &gt;= '&quot; + context.last_success + &quot;' OR modified_on &gt;= '&quot; + context.last_success + &quot;'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -296,7 +294,6 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -365,7 +362,6 @@
     <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
     <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMysqlRow"/>
     <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
@@ -380,8 +376,6 @@
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;finesse&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:a83dUFkKNci8xSDcuv5ocl2Rm8ciCuRBBb6Nv5iaelxovNjyY2UCl55P"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:REPOSITORY_SCHEMA_TYPE" show="false" value="_FsTZ0P1zEe6EVYHh9ozNMw - etl_control"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;etl_control&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -444,11 +438,9 @@
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_1" offsetLabelX="0" offsetLabelY="0" source="tDBRow_1" target="tDBInput_2">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
   <subjob>
@@ -479,13 +471,13 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
     <elementParameter field="CHECK" name="SUBJOB_DISPLAYED" show="false" value="false"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3055f910-f215-459e-bb7c-8ed93c9f600e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NZTNVzUvcFLFV1etBP66Ls1uL04WJ1it429nY2+8UMUZfDtQrpW950ojcRAmGzkDY4HRVGQ1/i2C&#13;
-iAO/4H9kcA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1629d218-ffaf-4d7e-ab33-d112b18155a5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>L7EB4Nt6HVK3oGVC72cn8fYbV4fVKoc+CCB28WeA/xlOHC0ZudwrY7RA5AKXXg4qasymGSI0aQOH&#13;
-vAbqRVHzIA==</DigestValue></Reference></SignedInfo><SignatureValue>f+Gj2Wfr325HHC7Im73AH8MR3ksJAZVXrvTnxEafSmJbfp38tAONj/iX1AxhZoElso/np3CPdBe6&#13;
-J4GesKQTNTJmna3hAqtPnIt6vm2yYvmIA/JogoIuTRAK0EWbyl2V3bNGMbhWHcJ+u/svtpGRYDLZ&#13;
-6kd9qM46DebqtN64d99u5utTNl6CkWaywX8NaE5Z1bR6BH9WATxpNMBL84WB/l41Bgb5s2KMXxqB&#13;
-fP5gKmx3NUW0+/1eDC+d15HV2+CTWBqrUUQx7llz47aPTkNEoyc8ybSqAIWk94EDx/oVaOwgCl0g&#13;
-IurX90KElbZrIyxc5fdlWE4O8wKvcNcHL2ipJA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_09e411bf-cf5f-4264-9e1a-a4ec2ceee2fb"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>b5e9ndQrJzJCTzlJFOpAdljyxtxcoSkzhMq5kyb1yFuIQml6HaXS+DV4OPyaNWKt7zi/qR/Pre2G&#13;
+YqmdUPfRCg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ff33b68c-423e-47b6-914f-4f8ea82f3758"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0kCMx6N4/VEmvT1FRK++tDs35kN8i2k6pbKiz63xg/3j+/hNFdfWt5VjT21PJ+6PIwsho+An6Qzz&#13;
+xoPYg8TxGQ==</DigestValue></Reference></SignedInfo><SignatureValue>YzVF0c9ch4REmZexMbg+f9suVs2eCPSmpZvmlb2W2cV4m5wWGe94Gf9rKbPkK+A61QrsPRbybVQ0&#13;
+clwAhGq0TLJbq+M29KtTWb4hb+0YnC9K+kwECvVK+zU8n6tliCwN5xjehJBjSruMx71lBUi7Hy0Y&#13;
+P8hk3kaeWdmjcwjwTthT5uUALb5j4kYlSJoWoaLxAu95/Qe66f65P0QqT1f5UrnZi9XhZSQaDwiJ&#13;
+3X8XYbO/XRfoAr4ik8GThWwY6Q4dGTX0wpCdxoJKq+h6pL9GWgNxbWc8TdbUwzHDafGW+BR/bTct&#13;
+6lD21FdIyo0QtiFgUMGLWCtR45QYqOEfgXO6iw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -507,4 +499,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1629d218-ffaf-4d7e-ab33-d112b18155a5" Target="#_3055f910-f215-459e-bb7c-8ed93c9f600e"><Timestamp>2024-04-23 12:05:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ff33b68c-423e-47b6-914f-4f8ea82f3758" Target="#_09e411bf-cf5f-4264-9e1a-a4ec2ceee2fb"><Timestamp>2024-04-23 12:42:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
