@@ -111,8 +111,6 @@
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;finesse&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:y4ScbHXOeMc19VUYISiG69M23cOGGrSmlyhFx1baJ+3iAEXr63fnaQK2"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_FsTZ0P1zEe6EVYHh9ozNMw - employee"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;employee&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -259,8 +257,6 @@
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;finesse&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:jXyqEdHJMvOEA9P1QKC2TsFZ7WJpsaXqVcF8+7rqQnaXVoZSx/8FQCa4"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_FsTZ0P1zEe6EVYHh9ozNMw - employee_details"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;employee_details&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -368,8 +364,6 @@
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;finesse&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:udoRkeGu6ybBhCY/3gTRfkhyYWk2WoKhJTG7stx9wrafJn6OauPYju1c"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_FsTZ0P1zEe6EVYHh9ozNMw - employee"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;employee&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -538,8 +532,6 @@
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;finesse&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:SEUSBQGbfJ6r2exBgKdmhh03edE/ORvFCBFrDqfatYccY1I6jgVOrcBB"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_FsTZ0P1zEe6EVYHh9ozNMw - employee_details"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;employee_details&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -740,13 +732,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_48632e42-124d-47ff-9752-0f8c1e66f4c6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ENyajcXcXUnvZJTNByKijFnc+rlMbmzhf9mtqLphvFS+jyyoSmZNHTF8vsEBUyX8k5VvoHWFSYPz&#13;
-ik+13IjHdA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3cf88342-b418-4eff-bc49-bc433feb61f1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>iXzlIr1bjFua167roVHxAASKYHWy27R//tb+QYZk+xg0Pnn3WdKknyHUSGS6KskppEC0ZdoC+N+Q&#13;
-u57mPgXURQ==</DigestValue></Reference></SignedInfo><SignatureValue>ICeCV5pU5tlpwXk5ljsBNYfQDRIkKJKiJTfVIA8LvvMevyTNV8+gKCUqrbmurJlqAYiLmdyoVMRS&#13;
-rOMjuikT/Ee2M0mzJny675NrNYZpmXcbyalE+PdX02LsaVvKoVP9sIvg75uGpveDYDBKLCNy65zg&#13;
-/65EOmi2PqnV6+/yt9HUwN50ulHwnQBTvyfyZIWuA4ogy3vNv22d/JLuruxj32ccooLY7yI6CbbQ&#13;
-qjHrxnnYMo9HAO8+j0EwlnG9osF29M4WDeHVD+Bm2ubXQ28cwE4hJ+noVBtoF4JT1XbAdVpPkx9e&#13;
-F3iDIE8B8CrlIag7ZVEQtSAMsH2ptLgZ8rOcQg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0e63f42f-7b4f-4916-93c9-dcede5ad6261"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GfoJtmPxyxvLWDoRVXE2pVIJKz9NfY/BHcisF736vO7I7349NJTFHCHxNown/6Z/STqHbqrepHqD&#13;
+shkq7ZOAYQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a4ca9263-ae32-4fe1-825a-e5880d10f820"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5avTli6ih+7KxsqefCWt6G7Ef8FceImOaydYnE+prsDqwB5047kLZNZZtGu//LzcPrgkdbh/KqEo&#13;
+6UElY6poBg==</DigestValue></Reference></SignedInfo><SignatureValue>gVsyGzVVCZVEKTykxga0+sZVg4zCUVyn8sdIKtgfglMkLQ05669NMo62hvFSoBZ/R942qaMQPrKn&#13;
+w4mHIh+9x0zbs178AGQXUOBLxuIelaWrf1wzVIQ7QW/kUEG4vTI1Hp3PohUt1xgqf+uZBwqmd4+U&#13;
+AwqBoN/i9fl/iIYdZr5VGtjQ4m8LMLcZgGNF+D0wXZCxYOOLsUN604mwTCQsH49i/kr1E+YIyYO2&#13;
+Y5nf7d6WIKDpSmBbF7AjGp+V8/5WvxWGb6VYDw38NtEtKqdHcB7EZ6a/341ma4XOUW7YXaj12RCx&#13;
+U6Yn8fZ948QMKYQSOdYQpRbodP2pMYevuii+TQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -768,4 +760,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3cf88342-b418-4eff-bc49-bc433feb61f1" Target="#_48632e42-124d-47ff-9752-0f8c1e66f4c6"><Timestamp>2024-04-23 11:51:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a4ca9263-ae32-4fe1-825a-e5880d10f820" Target="#_0e63f42f-7b4f-4916-93c9-dcede5ad6261"><Timestamp>2024-04-23 12:28:45</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
