@@ -145,6 +145,10 @@
     "id" : "_FsTZ0P1zEe6EVYHh9ozNMw",
     "version" : "Latest",
     "type" : "property"
+  }, {
+    "id" : "_FsTZ0P1zEe6EVYHh9ozNMw - employee",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
