@@ -158,8 +158,6 @@
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;finesse&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:s3lO1LrixZMCEjGAU4DlGvyJ2HHrLvzVs59T41OAV0ibB7JzNFhfUBnE"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_FsTZ0P1zEe6EVYHh9ozNMw - stg_customer"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;stg_customer&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -186,7 +184,7 @@
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="stg_customer" name="tDBInput_2">
-      <column comment="" key="false" length="20" name="customer_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="true" length="20" name="customer_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="100" name="customer_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -212,7 +210,7 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="dim_customer" name="Inserts">
-      <column comment="" key="false" length="20" name="customer_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="true" length="20" name="customer_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="100" name="customer_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -221,10 +219,10 @@
       <column comment="" key="false" length="100" name="customer_location" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="start_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="10" name="start_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="end_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="10" name="end_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="1" name="active_flag" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
@@ -241,7 +239,7 @@
       <column comment="" key="false" length="100" name="customer_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="end_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="10" name="end_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="1" name="active_flag" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
@@ -254,19 +252,19 @@
         <mapperTableEntries expression="Relational.ISNULL(row2.customer_location)?&quot;New&quot;:&quot;Old&quot; " name="Cust_Check" type="id_String"/>
         <mapperTableEntries expression="row1.customer_location.equals(row2.customer_location)?&quot;Same&quot;:&quot;Diff&quot; " name="Loc_Check" type="id_String"/>
       </varTables>
-      <outputTables activateExpressionFilter="true" columnNameFilter="" expressionFilter="Var.Cust_Check.equals(&quot;Old&quot;)|| Var.Cust_Check.equals(&quot;Old&quot;)&amp;&amp;  Var.Loc_Check.equals(&quot;Diff&quot;)" name="Inserts" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" columnNameFilter="" expressionFilter="Var.Cust_Check.equals(&quot;New&quot;)|| Var.Cust_Check.equals(&quot;Old&quot;)&amp;&amp;  Var.Loc_Check.equals(&quot;Diff&quot;)" name="Inserts" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.customer_id" name="customer_id" type="id_String"/>
         <mapperTableEntries expression="row1.customer_name" name="customer_name" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.customer_location" name="customer_location" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,TalendDate.getCurrentDate()) " name="start_date" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="&quot;&quot;" name="end_date" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,TalendDate.getCurrentDate()) " name="start_date" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;&quot;" name="end_date" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;Y&quot;" name="active_flag" nullable="true" type="id_String"/>
       </outputTables>
       <outputTables activateExpressionFilter="true" expressionFilter="Var.Cust_Check.equals(&quot;Old&quot;)&amp;&amp;  Var.Loc_Check.equals(&quot;Diff&quot;)" name="Updates" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row2.cust_key" name="cust_key" type="id_String"/>
         <mapperTableEntries expression="row1.customer_id" name="customer_id" type="id_String"/>
         <mapperTableEntries expression="row1.customer_name" name="customer_name" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,TalendDate.getCurrentDate()) " name="end_date" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,TalendDate.getCurrentDate()) " name="end_date" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;N&quot;" name="active_flag" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
@@ -330,8 +328,8 @@
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_1">
-      <column comment="" key="false" length="20" name="cust_key" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="BIGINT UNSIGNED" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="customer_id" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="20" name="cust_key" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="BIGINT UNSIGNED" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="20" name="customer_id" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="customer_location" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -417,7 +415,7 @@
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="dim_customer" name="tDBOutput_1">
-      <column comment="" key="false" length="20" name="customer_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="true" length="20" name="customer_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="100" name="customer_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -426,10 +424,10 @@
       <column comment="" key="false" length="100" name="customer_location" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="start_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="10" name="start_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="end_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="10" name="end_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="1" name="active_flag" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
@@ -437,7 +435,7 @@
       </column>
     </metadata>
     <metadata connector="REJECT" label="dim_customer" name="REJECT">
-      <column comment="" key="false" length="20" name="customer_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="true" length="20" name="customer_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="100" name="customer_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -446,10 +444,10 @@
       <column comment="" key="false" length="100" name="customer_location" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="start_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="10" name="start_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="end_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="10" name="end_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="1" name="active_flag" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
@@ -545,7 +543,7 @@
       <column comment="" key="false" length="100" name="customer_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="end_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="10" name="end_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="1" name="active_flag" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
@@ -562,7 +560,7 @@
       <column comment="" key="false" length="100" name="customer_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="end_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="10" name="end_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="1" name="active_flag" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
@@ -607,13 +605,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3765f315-64d5-45e2-abcb-ab0dede854c6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JfvKQkkJn4gY0iEdd/iAwx75+KHe00VmyZaVTWViRp/FBTeu8ZdTmpImWXanzpcHj8lz+IJAW38V&#13;
-6QDGq7OF1Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4fa660e3-6a52-4c98-8500-0e98ec8911be"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>euu8DDNbGI6fgTsGes9n//pDxsWOWPRJ0AjX/UFPFl/8rNFkmrtX9D0u6RstQygFo2LzX06E1/OZ&#13;
-F1wA19RIMQ==</DigestValue></Reference></SignedInfo><SignatureValue>gV2RIt80m/gVHCLzE1q+9/cip/2caoa5mcVP9EQQrkSQpjfT5gnTfH2GRHW19Zu70tyFjsTavzTW&#13;
-RpJ/8xevHbL0xn/BkhHfL+qIVnThCapWVOwg773CKW+NaDU8R7fJ01qpFW3CImxv6PR4ylOYoIQ0&#13;
-8YyD4v+6Jzzg9g8DPVV0MN4uL5aRL/QoUy0L3pSQio0jcei4FZKq09fKrBzFQ/X6NODLHBDVpjMI&#13;
-o0YYH34IcTNE/8MrEw6djEX4jO6PDYN7yIkrggSIvoQLDZCQ7MevVuAKfihcluADZtNYEef8HQku&#13;
-fCowV5ZmWMgSeLdN+RFNWYWcO+EarCKwkkO6pA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_98e2f2eb-eb8f-48db-84ec-1b42cd4990e8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tkaaCATJl/NtTWCBnD9c/7d/OfeETho8ttHkOWI0cq8qfTvZb7LGlSRGVwN9PG8EjOI23a62ahsW&#13;
+g1U50B5ebQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9f16360b-dc40-41ae-9528-261feeec3096"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZgK2fJomG3Ik6+gTTgPVAe09F/1/SFrfnfaW7sgBV7n8WZki+6BPSkmuon9ZLyvzbg4wPxYcbJyq&#13;
+9lq9skX4ig==</DigestValue></Reference></SignedInfo><SignatureValue>nyXubLR6+4w90Qt5l+3mnogitP61glywUA12BV7MmbEUwGr6AGk7j5j+PwLtuOO5XJVuo2szkC/P&#13;
+7sak05BMXafUfhRgOSortXkBMpUnva9EOp8/Y6j7Uaq4SQghwGkG5TVmjP9QS+zHNjv52U6jwb7g&#13;
+8+n733De5pcAzPDwct5bXq2m5TCRDBymCuZRaDhBmhsPjfzS+RqjQj2AOlw6BLymy4u6wU6eTDbV&#13;
+jSfjG1iS8gr9kVG1v3mIkSb0LVYqRe1fkgCLzdJ/tgxwe5S0kMMjpXrKXJPQOsZqYLtgDZzmV2Xd&#13;
+Xy6a/zjFk2wv9ghylVzzm2iJQy5W1k5Q5jFInA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -635,4 +633,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4fa660e3-6a52-4c98-8500-0e98ec8911be" Target="#_3765f315-64d5-45e2-abcb-ab0dede854c6"><Timestamp>2024-04-26 09:40:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9f16360b-dc40-41ae-9528-261feeec3096" Target="#_98e2f2eb-eb8f-48db-84ec-1b42cd4990e8"><Timestamp>2024-04-26 09:56:25</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
