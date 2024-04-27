@@ -121,6 +121,25 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_cX5fEARlEe-t_9ZcrZ4eDQ",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_FsTZ0P1zEe6EVYHh9ozNMw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_FsTZ0P1zEe6EVYHh9ozNMw - product_details_scd1",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_FsTZ0P1zEe6EVYHh9ozNMw - productdetails",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_eAsbgP1XEe6EVYHh9ozNMw",
     "version" : "0.1",
     "type" : "job"
