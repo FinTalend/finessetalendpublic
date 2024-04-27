@@ -354,8 +354,6 @@
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;finesse&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:iig/9y32OQ7m6mB/ClZdLC17fqbdjLwXGkiVLDsrWCNi3t3WDCySl4+2"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_FsTZ0P1zEe6EVYHh9ozNMw - productdetails"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;productdetails&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -386,10 +384,6 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Manufacturer"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CreatedAt"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ModifiedAt"/>
-      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -413,12 +407,6 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="100" name="Manufacturer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="CURRENT_TIMESTAMP" key="false" length="19" name="CreatedAt" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="CURRENT_TIMESTAMP" key="false" length="19" name="ModifiedAt" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
@@ -463,10 +451,8 @@
     <elementParameter field="CHECK" name="USE_L2" show="false" value="true"/>
     <elementParameter field="TABLE" name="L2_FIELDS" show="false">
       <elementValue elementRef="NAME" value="Category"/>
-      <elementValue elementRef="NAME" value="CreatedAt"/>
       <elementValue elementRef="NAME" value="Description"/>
       <elementValue elementRef="NAME" value="Manufacturer"/>
-      <elementValue elementRef="NAME" value="ModifiedAt"/>
       <elementValue elementRef="NAME" value="Name"/>
       <elementValue elementRef="NAME" value="Price"/>
       <elementValue elementRef="NAME" value="StockQuantity"/>
@@ -515,15 +501,6 @@
       <column comment="" key="false" length="100" name="Manufacturer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="CreationDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="ModifiedDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="'Active'" key="false" length="10" name="StatusFlag" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
       <column comment="" key="false" length="10" name="ProductKey" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -551,15 +528,6 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="100" name="Manufacturer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="CreationDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="ModifiedDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="'Active'" key="false" length="10" name="StatusFlag" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="ProductKey" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -591,13 +559,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f48dcd3d-ff0f-4908-a297-cce5e24f2b92"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ubJAbHNCXXR1n6pjMttFD8B152/J5ptlEkJPR4jAwaoffr/tc50W3U9Qwop+49kKbZrEEyebyNYW&#13;
-ZSzeplbFRA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c6a49a72-d311-4dc9-b259-110bfde2565a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KPHpoOVQ80y7J5AhIbpIDI+lWfE9Mj8Tj01qhQN7fQdmW4Btia6TCYEivzwnjRWShOJDSxN9JU21&#13;
-VlzVNRAIVw==</DigestValue></Reference></SignedInfo><SignatureValue>XKICYAysez8b3snxZ3HdhgqfyPB4RcdAJJk7aIwzY7VGBqLcVrxG1PEfGhGKU8mkdntyNnDTIPrD&#13;
-h8Vq9+5rkbNd7rRZTkTgSrTzXHqLG78ZVmVCafAWjehxve9dGV9oCzfVx6fUzmMFTeOPTdN1zS/9&#13;
-DEUrsRK2yPhMk3/JNIr1RAp1ZfdutKVjjJElphNdO593YpCFjepzM7YMf61C2pFcd2EU21Aga/cy&#13;
-z9vaaqezcvkuph60ijIBlWLFpnseieyVOdp8FXq/PKSmGcs2Zvk/sVSgF+vsPmTJyukLt016b8Xb&#13;
-EWWrc+onv+p1LsIxyOAO4jxxI+InJprIiJLtOg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_aed8b090-7f62-4c06-a01f-cbb8236324c8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>iI/V6Izm1QidyiVEgQqTQNN9el6C1j8K7hZMGhm0Nh9ITI4Fofp+sgu09bhRg3QgvK4muG0hSCq/&#13;
+ZQ6/RuyH3g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_308850aa-b72a-4d79-8aa0-b7c62d12e8f8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MiSEGiGhw6J2oNVgEdIrixyGR5WNE7GlZqOWvEiBLHd4OPqnJK5QkwMiFpeQ+EuyuTyX22y0L3EM&#13;
+ExpemWWIZA==</DigestValue></Reference></SignedInfo><SignatureValue>R6kkpOMf/735im5KQ0Xc0rtAtSd/y3ytEwQRhRQ/cSZK6MCZYFGo2WGhh8/It21Ui3ktTP0CqDvE&#13;
+bVViFLxIjjq/vOWtYioNSv2fuo0QdqF1qhtcreR7TnCNrvdthCL9Q+boefZa6dC74bKVawbZlFF8&#13;
+g03dxAsTSTFnTa7ngjYebNdOliXAOn+E39HxxJZJjzKcY1TmMR3zS+RadPEaXBlQdGoiSNEldJiE&#13;
+4kpYMV/IbpRhs5TLutpO7AHAqHdbJ1LWjsSMEwAjYL+UG3dgz9rC1Nua9yhnPIOBEvJ7mADhaYSO&#13;
+yLeuZNsRCaxFSR2VfJsUYVvoqdVZEmK6/Fj4NQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -619,4 +587,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c6a49a72-d311-4dc9-b259-110bfde2565a" Target="#_f48dcd3d-ff0f-4908-a297-cce5e24f2b92"><Timestamp>2024-04-27 08:17:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_308850aa-b72a-4d79-8aa0-b7c62d12e8f8" Target="#_aed8b090-7f62-4c06-a01f-cbb8236324c8"><Timestamp>2024-04-27 08:19:10</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
