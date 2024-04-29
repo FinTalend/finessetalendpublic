@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
-  <context confirmationNeeded="false" hide="false" name="Default"/>
+  <context confirmationNeeded="false" hide="false" name="Default">
+    <contextParameter comment="contains file to read" internalId="_gaPf8AYiEe-IF9wN5gC7sA" name="inputDir" prompt="inputDir?" promptNeeded="false" repositoryContextId="built-in" type="id_Directory" value="C:/Users/Sumit/Documents/talendBasicsData/data/in/"/>
+    <contextParameter comment="" internalId="_gaPf8QYiEe-IF9wN5gC7sA" name="new2" prompt="new2?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -96,13 +101,122 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_062878fd-1d6f-4ce9-a6fc-5c1bfbab762e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jpSlPEXlLEIYHjIatuZsI7glyr1NreYOIXWcpnz0/rmP66CCTsCmls5zrnpWw6maNfCoKb85Rnpb&#13;
-IWGsgCjqaQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_27a56dcb-a7ef-49c1-b544-bd57519323a2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>F148envqyl/CpUnaKS0Pgv7tXlTnsjqCH5eciQzNzkU9jrPIvRD27p7mpW1p0WGdNIn1bUjd/cEx&#13;
-+/RvzlHutg==</DigestValue></Reference></SignedInfo><SignatureValue>i0o9vcgMr7wHtBYb3mCdV6JJEH85eL/M37wJB4LKfkLO0q1hBgDLIEoIKtzdMQ3Q5mWe3IERIbe1&#13;
-mrlw7szbC1eT1RATuIaYU03NMS3v+gznH22OYXAS+0CPI0UpDsUh2sOwR7PAzOHZx1proPaiXLNR&#13;
-SyMYiAmex0/wUT0Oln+oxLn8CwemTHKeZhTOLnaUPXTihS8+3+O2LrG/1ZOS+9d+TD7VOUlhtHsJ&#13;
-lg4jBgzNEUOpRIK6jhTBQW+mZCKzQqUH/Ky1GyuwT8QQ9tshdhf9JJN3ZC4HEgzknzT2udCKBfgZ&#13;
-hctgxDrI4Ogto+4Pxl+hzD4UqFR+lyTdAGuMMg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.inputDir"/>
+    <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
+    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="YES"/>
+    <elementParameter field="CHECK" name="ERROR" value="false"/>
+    <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
+    <elementParameter field="TABLE" name="FILES">
+      <elementValue elementRef="FILEMASK" value="&quot;*.txt&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_MODIFIEDDATE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_ASC" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_DESC" value="false"/>
+    <elementParameter field="CHECK" name="IFEXCLUDE" value="false"/>
+    <elementParameter field="TEXT" name="EXCLUDEFILEMASK" show="false" value="&quot;*.txt&quot;"/>
+    <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="3"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="folder"/>
+      <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;))"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="file"/>
+      <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;))"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="extensions"/>
+      <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEEXTENSION&quot;))"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false">
+      <elementValue elementRef="folder" value=""/>
+      <elementValue elementRef="file" value=""/>
+      <elementValue elementRef="extensions" value=""/>
+      <elementValue elementRef="folder" value=""/>
+      <elementValue elementRef="file" value=""/>
+      <elementValue elementRef="extensions" value=""/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_1">
+      <column comment="" key="false" length="-1" name="folder" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="file" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="extensions" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="folder"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="file"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="extensions"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" key="false" length="-1" name="folder" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="file" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="extensions" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFixedFlowInput_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tLogRow_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="extensions"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="folder"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="file"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4f56002c-21da-47ed-95e8-80fd92e72064"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TRjzGRZYbluPpT0GHE2vuM/Ay7lj0ab2N3I9O1TrlvFjU1MNeTqp7u99+dT9Li3xxMUzQlZhKH+w&#13;
+FZoXBOnMkg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f58df2c6-f01f-41c7-a59f-5d266b0b398a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Xx1BCNfZlq1xjfpPLElAI9kPTR+I+K2Njo4rL2afy3FBxflYwnPkengNQtEPJjDvgTsyIShQ7OY2&#13;
+i0gu2/lBtQ==</DigestValue></Reference></SignedInfo><SignatureValue>WRt9kxfDV0snQU90FtK7ByrVZCKUrvEPUALcgrnzK1kBX3MiKoD++7SlrhR+TRfLvXyzPH09328D&#13;
+7ef26PegBc5/yhwQ4mbwGcEEBbwdxFsTM5msSmUL1x2fD2xNcP21cCwaAaICES/GF0j+rLQYlhEu&#13;
+jD9UF8RT4Bhc5PsGo0jL7v8eClTVR/tdk+bD01lDQunNREd5mDRatVk/G496QgC0W/97W6YIHFwJ&#13;
+g3fDusCK+9PAxG+JlFn9PotxBoO47UMJrISydIfG9CgRFaKD0c/mRiP725RR/tPw8zqvc2YQrpSj&#13;
+8qhK6aNt4F8iIbAIwn3duNK7Pq90xbe/iH2siw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -124,4 +238,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_27a56dcb-a7ef-49c1-b544-bd57519323a2" Target="#_062878fd-1d6f-4ce9-a6fc-5c1bfbab762e"><Timestamp>2024-04-29 11:59:43</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f58df2c6-f01f-41c7-a59f-5d266b0b398a" Target="#_4f56002c-21da-47ed-95e8-80fd92e72064"><Timestamp>2024-04-29 12:17:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
