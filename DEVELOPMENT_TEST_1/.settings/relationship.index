@@ -279,6 +279,10 @@
     "id" : "_NHs9YAbUEe-IF9wN5gC7sA - employee",
     "version" : "Latest",
     "type" : "schema"
+  }, {
+    "id" : "_NHs9YAbUEe-IF9wN5gC7sA - product",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
