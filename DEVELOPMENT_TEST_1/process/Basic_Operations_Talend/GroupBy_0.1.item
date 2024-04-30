@@ -631,7 +631,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="Output" name="Output">
+    <metadata connector="FLOW" name="out1">
       <column comment="" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -644,12 +644,14 @@
       <column comment="" key="false" length="10" name="date_of_joining" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="month_of_joining" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
       <column comment="" key="false" length="10" name="salary" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="20" name="month_of_joining" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="-1" name="Salary_check" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Quarter" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -657,13 +659,15 @@
         <mapperTableEntries expression="row4.salary&gt;50000?&quot;True&quot;:&quot;False&quot; " name="Salary_check" type="id_String"/>
         <mapperTableEntries expression="row1.month_of_joining.equals(&quot;January&quot;)||row1.month_of_joining.equals(&quot;February&quot;)||&#13;&#10;row1.month_of_joining.equals(&quot;March&quot;)?&quot;Q4&quot;:row1.month_of_joining.equals(&quot;April&quot;)||&#13;&#10;row1.month_of_joining.equals(&quot;May&quot;)||row1.month_of_joining.equals(&quot;June&quot;)?&quot;Q1&quot;:&quot;Q3&quot; " name="Quarter" type="id_String"/>
       </varTables>
-      <outputTables name="Output" sizeState="INTERMEDIATE">
+      <outputTables name="out1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row4.id " name="id" type="id_Integer"/>
-        <mapperTableEntries expression="StringHandling.UPCASE(row4.name ) " name="name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.name " name="name" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row4.age " name="age" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row4.date_of_joining " name="date_of_joining" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row4.month_of_joining " name="month_of_joining" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row4.salary " name="salary" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row4.month_of_joining " name="month_of_joining" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Salary_check" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Quarter" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row4" sizeState="INTERMEDIATE">
         <mapperTableEntries name="id" type="id_Integer"/>
@@ -697,15 +701,19 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="date_of_joining"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="salary"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="month_of_joining"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="salary"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Salary_check"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Quarter"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="Output" name="tLogRow_4">
+    <metadata connector="FLOW" name="tLogRow_4">
       <column comment="" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -718,12 +726,14 @@
       <column comment="" key="false" length="10" name="date_of_joining" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="month_of_joining" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
       <column comment="" key="false" length="10" name="salary" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="20" name="month_of_joining" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="-1" name="Salary_check" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Quarter" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
@@ -788,9 +798,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
-  <connection connectorName="FLOW" label="Output" lineStyle="0" metaname="Output" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tLogRow_4">
+  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tLogRow_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Output"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
   </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
@@ -813,13 +823,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5fd6e4c6-f645-43ab-97db-ccdeb40b557a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>nVxGet4+SsLo++Z//+BRloaicb488gJaPp+UlKzTDuZJubB+hxiX7yhiZawfra3QjYJnGcmF8Foo&#13;
-fkscTzhd2g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_35d434a0-421b-42a7-bcf1-ae45a6b7ee9a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vmCTbN2qUZsKLidV2GRN0YbLWaE1RQ0/gZ2s8C5q/duXsZvTghFj3j/tBxkqmv5fxST+8svne1Vl&#13;
-xji4WavGTg==</DigestValue></Reference></SignedInfo><SignatureValue>khB8E+JXDliZzQL81qS9qCnfcM1I/X4+Krhzpfati1plkeaYczEQOwLIbjtMK1Jc9JRpSeAFfuOZ&#13;
-4s8Tp+FZUpaBYiIxjoxF6WwLAaK2f+V/HTHJlR2bfTXNLWqyLEUK8OjQLkh/hraPfx9Cn5DS3aCJ&#13;
-oWAKYpdLwUxwOTM/9+OudAHBJ/8pPI1xn5Z3EsOtdqLc2KqZtO7cIbhe/oj8atBgKe+eIDxE6F2G&#13;
-z3JaQX/+a1L/tFau+2yRdEwNeNnK/jX0Gk8TJ0h/ItBpYkW24pxLZIOHZ9993pT5aa0UAzE8axgb&#13;
-gwZGiwLfBUH+I3/Eld2LNphgBrAFjhfBHBHOPw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_07a18ba6-1ce2-43aa-bff1-32ad157b3f78"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>y3yArXKuHQt2PMWp6d9Q4YuoE1fGfOwsUHG2bR8qg1LJgIAp8oSK4iw2NXPIDlc4i5qwsju2rgPT&#13;
+6Iqd8PjbWQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_db870aad-9a68-4b7d-9fa0-3b7eade430c1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PIWvYr8fQ5FirQG4I8r1b61EHIZ2GTaCM7iCXSzxhex5iYUEIbRHtxffgvnzG7Vpeax0OpLBSRq+&#13;
+CR3iyXLXxg==</DigestValue></Reference></SignedInfo><SignatureValue>LtbyCnzO7SwCVHJiLOjuklmLA3UFrdiryOWfZ0LYmKecbAgIYR4UNr/xOK1pe5WdZcdhOnEqiOHH&#13;
+usBTO6eS+SU5w7phuAXQfgzqgxd/ybaipORKb7fHPvLAGvMyKJ2CAkmcGKLV+f8cWuXG3CkCC0vP&#13;
+nFtvQNj0IYsQRn8kPL3bnhM/OtsDcgqhmznpFz7kb4KCUqU0Q7vcW6AzbW+UQ1tpPvCWFsvXAVeC&#13;
+dJQdvsSP0EWaplsMUfQzFyqMOYXm/5mWLTVo4RRJvDWvD/uqaGQneY83f7UpmKe6G35IAUQ/ui6h&#13;
++50emWP3ekZHhcCIuXS/07IakWoQHCwKjPkrIA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -841,4 +851,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_35d434a0-421b-42a7-bcf1-ae45a6b7ee9a" Target="#_5fd6e4c6-f645-43ab-97db-ccdeb40b557a"><Timestamp>2024-04-30 12:07:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_db870aad-9a68-4b7d-9fa0-3b7eade430c1" Target="#_07a18ba6-1ce2-43aa-bff1-32ad157b3f78"><Timestamp>2024-04-30 12:08:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
