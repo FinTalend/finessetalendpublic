@@ -100,16 +100,6 @@
   </parameters>
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_2"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tFileInputDelimited"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="File/Input"/>
-    <elementParameter field="CHECK" name="START" show="false" value="true"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tFileInputDelimited"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_-jvvUAYQEe-IF9wN5gC7sA"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
@@ -179,7 +169,7 @@
     <elementParameter field="LOOKUP_COLUMN_LIST" name="LOOKUP_MIN" value="StartIP"/>
     <elementParameter field="CHECK" name="LOOKUP_MIN_BOUNDS" value="true"/>
     <elementParameter field="LOOKUP_COLUMN_LIST" name="LOOKUP_MAX" value="EndIP"/>
-    <elementParameter field="CHECK" name="LOOKUP_MAX_BOUNDS" value="false"/>
+    <elementParameter field="CHECK" name="LOOKUP_MAX_BOUNDS" value="true"/>
     <elementParameter field="LOOKUP_COLUMN_LIST" name="LOOKUP_COLUMN" value="Country"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tIntervalMatch_1">
@@ -190,16 +180,6 @@
   </node>
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tFileInputDelimited"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="File/Input"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tFileInputDelimited"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_4_HpIAYQEe-IF9wN5gC7sA"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
@@ -316,13 +296,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e1a2e6aa-28d4-45f4-b3d4-a59633e43821"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>yXpvzXFHAsaUzkv/Ik2ceyuBIMvBjrw8fX+dWSkcHLz5FP3KD0Pgipf0VC0qrHMEyt9I2Bm0FoRG&#13;
-DMLum5fGIg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8705f9f4-0c76-4387-b942-a2891d9b5c9e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5qYy1MU34l3gnEaN1hc6yjKWIS3MPLGztKY3NMzuiNvopSzVEe1wLDbTiPFsEB/0sjVCVF+YLDPY&#13;
-x+M7S+OvYQ==</DigestValue></Reference></SignedInfo><SignatureValue>n/2tXweu1pmRXBj9ewY0x6UrP+Ks4SkdEFfNoKpka++LnIwg6h7twBsHur6Ws5yli9Mb0mJHuYVL&#13;
-mIW7F9g3Cew8mL+GsVHkt4daMtIZYzQwWpZYcZzF7Oi3PaQipaCabdQpjzTfUTyCiUXuLKI9Nnvw&#13;
-1svUgLQiqdT9YrZ61ndXJ1DFOnTsyr4zUm89vF/1GFQDqzsLGdE6YgMpO3dGhD9tZzQERc4imTyS&#13;
-YJJJ24W4xMWbxaCLZJeFaUow2qzrYubef2aNOwW7n1RtjooGkPUPqvApYk9KcQHnsp51Vj+IelBz&#13;
-TRKvrJeRMtlrtcbWWn/2icd/BQkUkh/0wX7VvA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e1ce4975-ae3d-41f9-bb84-747fc22d1a09"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Dycn2wTPdlxs6glZcoCTN3TNPjeRxF2Q42EwcCiD0J9hj9+htYlEn4VWICqsrINePMB2dEff9Or9&#13;
+fWpPzc6KeQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f4816af7-4d6f-49ec-abab-e79366ec1134"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JwTyPdnNO5VDS5iDOK8V3IvgBNR9aEEm96ZtUkEgPPlyvyd0Xg5h27tNVf/E7NYMWVzrKEL7QoM/&#13;
+zqnYukpHCQ==</DigestValue></Reference></SignedInfo><SignatureValue>iBp9e4r24nw6Godu6YqovL+eNqp6NgsYGY4lDGSlMq1FA1ioCXwgY8eblgSOIFAmy0SaLP6y3CuA&#13;
+hyyJO1B04mlBxP2tdiw3hvrpMbYE+cULTrI8BOIoAzCGr1n60yUnVoJJ4fIMHWqrPT+VXntPYEUe&#13;
+Zznu+eFxLqeVGrDqudPayDIgF58w+STbyCOYoPBbJpvdlKLswOTdrr8ZhcDRpuueT4Cac4ZoUJYD&#13;
+Nnx+iBhj7mGCD9nuFPBUKtXNqq14SGFx4PACT+lzkpY2eeZxysoCnXDGL9EyxOlcNCUCQAKbYg1p&#13;
+fWqZDjXFHZUfHQBhM/S68nSiMcUnR4Y+Ma/JLA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -344,4 +324,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8705f9f4-0c76-4387-b942-a2891d9b5c9e" Target="#_e1a2e6aa-28d4-45f4-b3d4-a59633e43821"><Timestamp>2024-04-29 10:18:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f4816af7-4d6f-49ec-abab-e79366ec1134" Target="#_e1ce4975-ae3d-41f9-bb84-747fc22d1a09"><Timestamp>2024-04-30 12:24:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
