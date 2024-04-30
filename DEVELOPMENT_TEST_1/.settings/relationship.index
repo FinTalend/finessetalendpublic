@@ -267,6 +267,21 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_ksgRAAa_Ee-IF9wN5gC7sA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_NHs9YAbUEe-IF9wN5gC7sA",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_NHs9YAbUEe-IF9wN5gC7sA - employee",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_s8aogPvZEe6EVYHh9ozNMw",
     "version" : "0.1",
     "type" : "job"
