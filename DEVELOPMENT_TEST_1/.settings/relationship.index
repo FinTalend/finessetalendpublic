@@ -163,10 +163,6 @@
     "version" : "Latest",
     "type" : "property"
   }, {
-    "id" : "_-47aYAerEe-IVLttA5QFSQ - Customer",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
     "id" : "_-47aYAerEe-IVLttA5QFSQ - SalesPerson",
     "version" : "Latest",
     "type" : "schema"
