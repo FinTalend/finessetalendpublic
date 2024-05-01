@@ -296,6 +296,9 @@
       <column comment="" key="true" length="10" name="SalesOrderID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="10" name="SalesOrderDetailID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" defaultValue="((0))" key="false" length="3" name="RevisionNumber" nullable="false" pattern="" precision="0" sourceType="TINYINT" type="id_Short" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -371,9 +374,6 @@
       <column comment="" defaultValue="'getdate()'" key="false" length="23" name="ModifiedDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="10" name="SalesOrderDetailID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
       <column comment="" key="false" length="25" name="CarrierTrackingNumber" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -407,6 +407,7 @@
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="SalesDetails" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="SalesOrderHeader.SalesOrderID " name="SalesOrderID" type="id_Integer"/>
+        <mapperTableEntries expression="row1.SalesOrderDetailID " name="SalesOrderDetailID" type="id_Integer"/>
         <mapperTableEntries expression="SalesOrderHeader.RevisionNumber " name="RevisionNumber" type="id_Short"/>
         <mapperTableEntries expression="SalesOrderHeader.OrderDate " name="OrderDate" type="id_Date"/>
         <mapperTableEntries expression="SalesOrderHeader.DueDate " name="DueDate" type="id_Date"/>
@@ -432,7 +433,6 @@
         <mapperTableEntries expression="SalesOrderHeader.Comment " name="Comment" nullable="true" type="id_String"/>
         <mapperTableEntries expression="SalesOrderHeader.rowguid " name="rowguid" type="id_Object"/>
         <mapperTableEntries expression="SalesOrderHeader.ModifiedDate " name="ModifiedDate" type="id_Date"/>
-        <mapperTableEntries expression="row1.SalesOrderDetailID " name="SalesOrderDetailID" type="id_Integer"/>
         <mapperTableEntries expression="row1.CarrierTrackingNumber " name="CarrierTrackingNumber" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.OrderQty " name="OrderQty" type="id_Short"/>
         <mapperTableEntries expression="row1.ProductID " name="ProductID" type="id_Integer"/>
@@ -502,6 +502,8 @@
     <elementParameter field="TABLE" name="LENGTHS" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="SalesOrderID"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SalesOrderDetailID"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="RevisionNumber"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="OrderDate"/>
@@ -552,8 +554,6 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ModifiedDate"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SalesOrderDetailID"/>
-      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="CarrierTrackingNumber"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="OrderQty"/>
@@ -578,6 +578,9 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_1">
       <column comment="" key="true" length="10" name="SalesOrderID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="SalesOrderDetailID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="((0))" key="false" length="3" name="RevisionNumber" nullable="false" pattern="" precision="0" sourceType="TINYINT" type="id_Short" usefulColumn="true">
@@ -653,9 +656,6 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="'getdate()'" key="false" length="23" name="ModifiedDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="true" length="10" name="SalesOrderDetailID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="25" name="CarrierTrackingNumber" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
@@ -809,13 +809,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2925ed10-3ed2-45de-bf4b-1f648fcf64f5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3JnjlZhJ1fbgUnr5Mld7s+sJRXzYURhJ1rLCvN0wKo30m5EVYlml997P5IvnYUvjdZOKgmTxC1FL&#13;
-0entKSWL8g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_216614cb-1443-45fd-93c5-1e456838a317"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YP3MGxdlj4VJu8yuadIgRxTROPDFaudJbMUNr6XUG2dHAtUT9oPxrn4rFiElyWhchgK7LZFQDq2x&#13;
-Y/kAf7U/Lw==</DigestValue></Reference></SignedInfo><SignatureValue>NI+/AUZ7XB0jRl8d402nJ92OLagX4ApothVOfw4jtZWxnCGDkXsnbhPpNromIyBrikYQ1k8pioYf&#13;
-EaHYEdrz4lSaaEyY/Gc9ln+dz+3nZa6fwsBlOuGovzRWWqnLVzSSfJPORzj+Go2SzKCdAI2WpCra&#13;
-R+mHxe9v5kRDTUfGUOe9aG0f8QHbL0ytItV32fqJLKFnmjZ2RE0T7fQQGdKhC1Uf96wPqpLdPQ5R&#13;
-vJlqlpVdmzg/SrbAr9d+U/Py1/KPnfGRupn85AxHWJ38tuHAYDE8sjQfu9wAxFx10xA7RXZFAmLm&#13;
-Gp0caqdC4WvYYqb7m5bInZcpsOV9G63gy0MLGQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2377dc77-3e94-4647-b4c0-fc1a51b38d7e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Nlbeqn2c7HqFz/Kqy8t6V3Hl+wcxVMsNazvyjS3aVjvfWnx18s4bfxpN4rvxhhmMdSaLY6m0J/ii&#13;
+ckkWf7iSuA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1609e977-4e72-48ea-a087-6400d00a85ff"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FPeQDaPIpA4oMd9iRExNivuGcMVhGC9HZ4INqpL4BBa9kGssT38nPSjL1kMuqvJ2xxTi+w3uhfuJ&#13;
+jzisuK5CUA==</DigestValue></Reference></SignedInfo><SignatureValue>bipMVSftvrijj5yLwTQpYJ8e8tS/M44xIILpADHevWJUEOt+TxNdN+syqt8GEPsWTYF3h2xXq2+T&#13;
+nnqD8Aw1bnYk+EOVNrLDnhEubapj9q//vXNAnUGkbiacgCXpk4OIvYxAbtGx7xfN75tnF+z0nT2O&#13;
+84zhBOa/BoQHBu1nfaw7rpQ4l3I35RZnnCrjjAb310xZuKW11qN6WImmYsQT85+Hl1WxrrduGoxT&#13;
+6ezMBtU19cqpRXg65olMKxlj2XRnOp8uO3qw3TVTFgIv3RbKylkOg6DT0zFIF4979hMHmF1+Otkc&#13;
+OAUwxOlVD98bXQJCpxoEwwXXm5RFpHtZdn4GWw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -837,4 +837,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_216614cb-1443-45fd-93c5-1e456838a317" Target="#_2925ed10-3ed2-45de-bf4b-1f648fcf64f5"><Timestamp>2024-05-01 12:45:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1609e977-4e72-48ea-a087-6400d00a85ff" Target="#_2377dc77-3e94-4647-b4c0-fc1a51b38d7e"><Timestamp>2024-05-01 12:46:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
