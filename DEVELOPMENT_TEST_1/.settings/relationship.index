@@ -150,6 +150,33 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "__XPfUAexEe-IVLttA5QFSQ",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_-47aYAerEe-IVLttA5QFSQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_-47aYAerEe-IVLttA5QFSQ - Customer",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_-47aYAerEe-IVLttA5QFSQ - SalesPerson",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_-47aYAerEe-IVLttA5QFSQ - SalesTerritory",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_-47aYAerEe-IVLttA5QFSQ - Store",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_cX5fEARlEe-t_9ZcrZ4eDQ",
     "version" : "0.1",
     "type" : "job"
