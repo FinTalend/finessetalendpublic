@@ -2,5 +2,6 @@
 <recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin">
   <deletedFolders>process/CourseProjects</deletedFolders>
   <deletedFolders>process/TalendDemoJobs1</deletedFolders>
+  <deletedItems id="_-47aYAerEe-IVLttA5QFSQ" path="" type="METADATA_CONNECTIONS"/>
   <deletedItems id="_99y_AAbTEe-IF9wN5gC7sA" path="" type="METADATA_CONNECTIONS"/>
 </recyclebin:RecycleBin>
