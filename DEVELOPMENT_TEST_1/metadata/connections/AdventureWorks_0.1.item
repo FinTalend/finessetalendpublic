@@ -1,20 +1,46 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><TalendMetadata:DatabaseConnection xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:xmi="http://www.omg.org/XMI" AdditionalParams="" DatabaseType="Microsoft SQL Server" DatasourceName="" DbmsId="id_MSSQL" DriverClass="net.sourceforge.jtds.jdbc.Driver" FileFieldName="" NullChar="" Password="enc:system.encryption.key.v1:SAU8lBi5xdIP70qDRAi4xhj78WXyBQVoMV+tyYUsR2qQh+Xpj4NJv2g=" Port="1433" ProductId="SQL_SERVER" SID="AdventureWorks_S_New" SQLMode="false" ServerName="192.168.11.143" SqlSynthax="" StandardSQL="true" StringQuote="" URL="jdbc:jtds:sqlserver://192.168.11.143:1433/AdventureWorks_S_New;" UiSchema="" Username="Sqluser2" dbVersionString="JTDS" id="_-47aYAerEe-IVLttA5QFSQ" label="AdventureWorks" name="AdventureWorks" supportNLS="false" xmi:id="_nBbkUAesEe-IVLttA5QFSQ" xmi:version="2.0">
-  <taggedValue tag="Is Conn Need Reload" value="false" xmi:id="_nBbkUQesEe-IVLttA5QFSQ"/>
-  <taggedValue tag="package filter" value="" xmi:id="_nCLyQAesEe-IVLttA5QFSQ"/>
-  <taggedValue tag="Status" value="" xmi:id="_nCLyQQesEe-IVLttA5QFSQ"/>
-  <taggedValue tag="Version" value="0.1" xmi:id="_nCLyQgesEe-IVLttA5QFSQ"/>
-  <taggedValue tag="Purpose" value="" xmi:id="_nCLyQwesEe-IVLttA5QFSQ"/>
-  <taggedValue tag="Description" value="" xmi:id="_nCLyRAesEe-IVLttA5QFSQ"/>
-  <taggedValue tag="Author" value="" xmi:id="_nCLyRQesEe-IVLttA5QFSQ"/>
-  <taggedValue tag="otherParameter" xmi:id="_nCLyRgesEe-IVLttA5QFSQ"/>
-  <parameters key="CONN_PARA_KEY_USERNAME" value="Sqluser2" xmi:id="_nBbkUgesEe-IVLttA5QFSQ"/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_112c9a39-7a33-4fe1-b87d-d2253b642dfa"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pXgsf5cx65sa5OG9ptbVWLh5ROEcfDZJESHxFs8ZMdL352c4HlNU2tNTgHLeqaWZCcQj+hF15BOh&#13;
-maIo9X0D9g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fd884981-0a89-46b5-a708-36e733f0a81f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QXUSzItcB56XfJ6YOIKKAIrUXc+TtDuipIhrkhLp8+YvIWolB3pQ6n9vvO/qNApWVV5sF0Qt/EJF&#13;
-uN8LwmhSjQ==</DigestValue></Reference></SignedInfo><SignatureValue>SmQ78GVuD81+6qJGRKM3h/CMuIcwnZrJPTJV+JmA9jPAP71rXQBxUS4IkvR3P02nQChIOirHzJ2h&#13;
-JFE1O1QJP9k+nl7QiC0YfJeSVhWK9CXQzfF8O5hlYOQW98zmsNaiXEpzbqKXkz2hbKSUf1k25VnW&#13;
-EKS2QTu7MIaOT3LTvtV46cqV6m4xej7kI8Kp4IRdSsODgPrLzLqGMM7e31A88c+yKP1YHqlcqaI4&#13;
-4camy2MYiJcLzRUEWNNOQK3++dWLSJioVPqQDkk51/qhegsbxZrUldSoOUjA4Bk0RW2Xz0242kVo&#13;
-C+3S1vhFwkE8lzMKDOFKpzHUGTub41yp8Z8Ngg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <TalendMetadata:DatabaseConnection AdditionalParams="" DatabaseType="Microsoft SQL Server" DatasourceName="" DbmsId="id_MSSQL" DriverClass="net.sourceforge.jtds.jdbc.Driver" FileFieldName="" NullChar="" Password="enc:system.encryption.key.v1:SAU8lBi5xdIP70qDRAi4xhj78WXyBQVoMV+tyYUsR2qQh+Xpj4NJv2g=" Port="1433" ProductId="SQL_SERVER" SID="AdventureWorks2014_S_New" SQLMode="false" ServerName="192.168.11.143" SqlSynthax="" StandardSQL="true" StringQuote="" URL="jdbc:jtds:sqlserver://192.168.11.143:1433/AdventureWorks2014_S_New;" UiSchema="" Username="Sqluser2" dataPackage="_tlg8YAesEe-IVLttA5QFSQ" dbVersionString="JTDS" id="_-47aYAerEe-IVLttA5QFSQ" label="AdventureWorks" name="AdventureWorks" supportNLS="false" xmi:id="_nBbkUAesEe-IVLttA5QFSQ">
+    <taggedValue tag="Is Conn Need Reload" value="true" xmi:id="_nBbkUQesEe-IVLttA5QFSQ"/>
+    <taggedValue tag="package filter" value="" xmi:id="_nCLyQAesEe-IVLttA5QFSQ"/>
+    <taggedValue tag="Status" value="" xmi:id="_nCLyQQesEe-IVLttA5QFSQ"/>
+    <taggedValue tag="Version" value="0.1" xmi:id="_nCLyQgesEe-IVLttA5QFSQ"/>
+    <taggedValue tag="Purpose" value="" xmi:id="_nCLyQwesEe-IVLttA5QFSQ"/>
+    <taggedValue tag="Description" value="" xmi:id="_nCLyRAesEe-IVLttA5QFSQ"/>
+    <taggedValue tag="Author" value="" xmi:id="_nCLyRQesEe-IVLttA5QFSQ"/>
+    <taggedValue tag="otherParameter" xmi:id="_nCLyRgesEe-IVLttA5QFSQ"/>
+    <taggedValue tag="DB ProductName" value="Microsoft SQL Server" xmi:id="_tlDCUAesEe-IVLttA5QFSQ"/>
+    <taggedValue tag="DB ProductVersion" value="12.00.2000" xmi:id="_tlDCUQesEe-IVLttA5QFSQ"/>
+    <taggedValue tag="DB IdentifierQuoteString" value="&quot;" xmi:id="_tlDCUgesEe-IVLttA5QFSQ"/>
+    <parameters key="CONN_PARA_KEY_USERNAME" value="Sqluser2" xmi:id="_nBbkUgesEe-IVLttA5QFSQ"/>
+    <parameters key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value="" xmi:id="_rWUg8AesEe-IVLttA5QFSQ"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog dataManager="_nBbkUAesEe-IVLttA5QFSQ" name="AdventureWorks2014_S_New" xmi:id="_tlg8YAesEe-IVLttA5QFSQ">
+    <ownedElement name="db_accessadmin" xmi:id="_tlg8YQesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="db_backupoperator" xmi:id="_tlg8YgesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="db_datareader" xmi:id="_tlg8YwesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="db_datawriter" xmi:id="_tlg8ZAesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="db_ddladmin" xmi:id="_tlg8ZQesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="db_denydatareader" xmi:id="_tlg8ZgesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="db_denydatawriter" xmi:id="_tlg8ZwesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="db_owner" xmi:id="_tlg8aAesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="db_securityadmin" xmi:id="_tlg8aQesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="dbo" xmi:id="_tlg8agesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="guest" xmi:id="_tlg8awesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="HumanResources" xmi:id="_tlg8bAesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="INFORMATION_SCHEMA" xmi:id="_tlg8bQesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Person" xmi:id="_tlg8bgesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Production" xmi:id="_tlg8bwesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Purchasing" xmi:id="_tlg8cAesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Sales" xmi:id="_tlg8cQesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="sys" xmi:id="_tlg8cgesEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+  </orgomg.cwm.resource.relational:Catalog>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a4ae871b-ee73-4a48-93ea-eb135462e844"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mEuNfSBJOXtuDcuFROkEbhh1NL/1YVuGZn+EpLQ5k6hE+g0u3LeH0HaB93Od7DmfSFhEUMenaBD5&#13;
+g+9xl8ZQLg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e2837454-c454-4fb5-9bc5-e74964c5f5f4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UY8g0Z5chI0vXDu8rTllPRWb7/uCkmivjP0VWudVe3xJ5mA/IVaU0B7xKcGKFtYPSeKD6LVj4JD1&#13;
+rcDTow64uw==</DigestValue></Reference></SignedInfo><SignatureValue>EAOA0rTl2d2OFIZWN0a3004mMngcL2S8dUk5z06OKZwJ9XZkFMn9j1zWttqu6JNkrXJml/hr/dG0&#13;
+LgenBOgOPS04KGmH3JIrdqON2VftD1pgMlF/gkb5s//8YYbUv/pcCDDfb5d1lB/aM7Iih1yqoXiu&#13;
+WmeW+opnDjFxMpHDYyLKX9HpRV9ie9cXf7fkrooKIzi3uc5eCKOKos3waGYIxtJh/DEYYzwWpIsg&#13;
+/nCPiNZhQRRL/Op7Mdypnz8x1hE72kstKXlY6/ssI0H6xvlQCTiNkIDDcx6BMxzduaxxk+5R/s5J&#13;
+1jTlcYXfIEsVIKmGOnRGEkjmf/UqQXkZnEusoA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -36,4 +62,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fd884981-0a89-46b5-a708-36e733f0a81f" Target="#_112c9a39-7a33-4fe1-b87d-d2253b642dfa"><Timestamp>2024-05-01 11:19:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></TalendMetadata:DatabaseConnection>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e2837454-c454-4fb5-9bc5-e74964c5f5f4" Target="#_a4ae871b-ee73-4a48-93ea-eb135462e844"><Timestamp>2024-05-01 11:19:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
