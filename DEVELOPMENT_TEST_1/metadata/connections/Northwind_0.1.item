@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <TalendMetadata:DatabaseConnection AdditionalParams="" DatabaseType="Microsoft SQL Server" DatasourceName="" DbmsId="id_MSSQL" DriverClass="net.sourceforge.jtds.jdbc.Driver" FileFieldName="" NullChar="" Password="enc:system.encryption.key.v1:AOXN+1bqZ2bnG/PHf6/43BlYCTP2LmZ+uJimS45FWP9KWPoBM8LjnUE=" Port="1433" ProductId="SQL_SERVER" SID="Northwind" SQLMode="false" ServerName="192.168.11.143" SqlSynthax="" StandardSQL="true" StringQuote="" URL="jdbc:jtds:sqlserver://192.168.11.143:1433/Northwind;" UiSchema="dbo" Username="Sqluser2" dataPackage="_tFxpIAhsEe-IVLttA5QFSQ" dbVersionString="JTDS" id="_fiseoAhsEe-IVLttA5QFSQ" label="Northwind" name="Northwind" supportNLS="false" xmi:id="_tECjwAhsEe-IVLttA5QFSQ">
+    <taggedValue tag="Is Conn Need Reload" value="false" xmi:id="_tECjwQhsEe-IVLttA5QFSQ"/>
+    <taggedValue tag="package filter" value="" xmi:id="_tElWUAhsEe-IVLttA5QFSQ"/>
+    <taggedValue tag="Status" value="" xmi:id="_tElWUQhsEe-IVLttA5QFSQ"/>
+    <taggedValue tag="Version" value="0.1" xmi:id="_tElWUghsEe-IVLttA5QFSQ"/>
+    <taggedValue tag="Purpose" value="" xmi:id="_tElWUwhsEe-IVLttA5QFSQ"/>
+    <taggedValue tag="Description" value="" xmi:id="_tElWVAhsEe-IVLttA5QFSQ"/>
+    <taggedValue tag="Author" value="" xmi:id="_tElWVQhsEe-IVLttA5QFSQ"/>
+    <taggedValue tag="otherParameter" xmi:id="_tElWVghsEe-IVLttA5QFSQ"/>
+    <taggedValue tag="DB ProductName" value="Microsoft SQL Server" xmi:id="_tE-X4AhsEe-IVLttA5QFSQ"/>
+    <taggedValue tag="DB ProductVersion" value="12.00.2000" xmi:id="_tE-X4QhsEe-IVLttA5QFSQ"/>
+    <taggedValue tag="DB IdentifierQuoteString" value="&quot;" xmi:id="_tE-X4ghsEe-IVLttA5QFSQ"/>
+    <parameters key="CONN_PARA_KEY_USERNAME" value="Sqluser2" xmi:id="_tECjwghsEe-IVLttA5QFSQ"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog dataManager="_tECjwAhsEe-IVLttA5QFSQ" name="Northwind" xmi:id="_tFxpIAhsEe-IVLttA5QFSQ">
+    <ownedElement name="dbo" xmi:id="_tFxpIQhsEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+  </orgomg.cwm.resource.relational:Catalog>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a011e1cb-6170-42e6-ae20-fb6cc25d98c2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>M6SjOSs1kiWI41LvwG4FKYCHIMrnCBpS+Tv7b5xngerIB5upQ5yCk3Qb8luwQ4yPUV/PWzYPB/9K&#13;
+sCAFBuc+Lw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8d2bab50-8b0c-457f-9a36-e9d764db5971"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>u9CYRmh5IuRzXI8I90BpddjIVo2J4xQejm1GVp93FeVictTHAz1Q6zCFQKyJBQKs10fBCO392W5r&#13;
+DsraIIIAzw==</DigestValue></Reference></SignedInfo><SignatureValue>AHDYx5SnalwqRsWw7mUjDVcS5weFNLtygF1T2rjZzqt2lnX+iS4n7W7L2317ItLbiQgnrHU9ANiW&#13;
+4YVqi+Ak4txJRyCroA22+H0BaQEvi94rqKcTIoWT/kDX1bBn0IJpEGC4JjY7yRTPkHPvvzzz9T91&#13;
+zmkN/EwcJ8YjxdAH8NxaQQKvMWYMoxotZuTga+NdLv7N8IuP4gmGXYV3jgb2VCOlUZE50YookoUy&#13;
+g3k0hbGlItIhlHTz89uQutx17HkpUTFeq6XDjTnYKxYtpevv9qm4sb+j9rxx4rN6bgFU6H2G1KwX&#13;
+QAaIJk1aiA7VygDdG/DezgU4gZqvtgO6Sc6OLw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8d2bab50-8b0c-457f-9a36-e9d764db5971" Target="#_a011e1cb-6170-42e6-ae20-fb6cc25d98c2"><Timestamp>2024-05-02 10:14:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
