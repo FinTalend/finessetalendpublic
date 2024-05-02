@@ -174,10 +174,6 @@
     "id" : "_-47aYAerEe-IVLttA5QFSQ - Store",
     "version" : "Latest",
     "type" : "schema"
-  }, {
-    "id" : "_PQ28AAe1Ee-IVLttA5QFSQ - Customer",
-    "version" : "Latest",
-    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
