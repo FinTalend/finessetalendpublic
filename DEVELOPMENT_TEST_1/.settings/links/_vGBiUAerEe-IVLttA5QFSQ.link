@@ -1,0 +1,29 @@
+{
+  "itemId" : "_vGBiUAerEe-IVLttA5QFSQ",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_qyaNQAhJEe-IVLttA5QFSQ",
+    "parameterList" : [ {
+      "id" : "_qzEUkQhJEe-IVLttA5QFSQ",
+      "name" : "AdventureWorks_SalesDB_Password"
+    }, {
+      "id" : "_qzEUkghJEe-IVLttA5QFSQ",
+      "name" : "AdventureWorks_SalesDB_Database"
+    }, {
+      "id" : "_qzEUkwhJEe-IVLttA5QFSQ",
+      "name" : "AdventureWorks_SalesDB_Port"
+    }, {
+      "id" : "_qzEUlAhJEe-IVLttA5QFSQ",
+      "name" : "AdventureWorks_SalesDB_Schema"
+    }, {
+      "id" : "_qzEUlQhJEe-IVLttA5QFSQ",
+      "name" : "AdventureWorks_SalesDB_Login"
+    }, {
+      "id" : "_qzEUlghJEe-IVLttA5QFSQ",
+      "name" : "AdventureWorks_SalesDB_Server"
+    }, {
+      "id" : "_qzEUlwhJEe-IVLttA5QFSQ",
+      "name" : "AdventureWorks_SalesDB_AdditionalParams"
+    } ]
+  } ]
+}
