@@ -306,7 +306,7 @@
       <column comment="" key="true" length="10" name="SalesOrderDetailID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="10" name="SalesOrderID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
+      <column comment="" key="false" length="10" name="SalesOrderID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="((0))" key="false" length="3" name="RevisionNumber" nullable="false" pattern="" precision="0" sourceType="TINYINT" type="id_Short" usefulColumn="true">
@@ -842,7 +842,7 @@
       <column comment="" key="true" length="10" name="SalesOrderDetailID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="10" name="SalesOrderID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
+      <column comment="" key="false" length="10" name="SalesOrderID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="((0))" key="false" length="3" name="RevisionNumber" nullable="false" pattern="" precision="0" sourceType="TINYINT" type="id_Short" usefulColumn="true">
@@ -952,7 +952,7 @@
       <column comment="" key="true" length="10" name="SalesOrderDetailID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="10" name="SalesOrderID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
+      <column comment="" key="false" length="10" name="SalesOrderID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="((0))" key="false" length="3" name="RevisionNumber" nullable="false" pattern="" precision="0" sourceType="TINYINT" type="id_Short" usefulColumn="true">
@@ -1078,13 +1078,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d7bf0441-9173-4baf-8269-9ae63118dd50"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>p5GrARzwTDI/6MKTMlTRuXMEVOM73zetlEfRO5hgnkVtRcdRigYthV+z723U0/X7xdTJ2VW++P6W&#13;
-hRjYgdjN4A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d8cf01d9-0fb4-4250-8357-f261577f7fbf"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hwaTX2GCOK7vS9VMSZT79hatyWI+6Lfa/JRoaonw7WcBMZhTI6iBUoPNylhqJrozLLQwFoVc9vlu&#13;
-fA1qsvzFkw==</DigestValue></Reference></SignedInfo><SignatureValue>MQi+joEMdw2I63e8fZ+g51L3OpMxfrMmgle/BzanK3fqKJOnS34MxE3/fSxnYjGsKozf4D0ILRWn&#13;
-Iremr5IOfbBzyaeg+RR0U2sjXf5XnqX9cepySlEBdImfbVg3wescwy3Tnbc5V9tGQducKEirT+BO&#13;
-X9LuZvCOYU+UJ87kvpck/7zw4H5LTJDB7eyBsbh/i/aY+SMTJyzei67mV6676dKuYuGTXiWYVl2e&#13;
-9zU0VIdU5G6Oac/9YLnEAg9mKNgDP4qb2Kl0MaHQLiR58WclcYbKfTZbOl4bF4nn2D1HaetTtQRB&#13;
-emHz5QJokaingqZC/mmguQKmxSanoALvFlQwtg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_30532d2d-0f4a-4a57-97af-5cdfc89c64e5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zQzITDaYn8ZNYagfntj6Xnzyzt3hY+w7qDxdujF0kaCrvaWSp6rgt9zbFf7E7dps5eh8GDSuJa63&#13;
+ZAucDutpBA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b7bacca9-8afb-4bae-a8fc-d61068d0c9d3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>D7wg4CVAPoJngG7+nXur7bje+ch2Yh0oylh/GCDC+2jnbL3jFByGaYvZWDwhkWLJ15p/divcob0f&#13;
+zwPkQBOuSw==</DigestValue></Reference></SignedInfo><SignatureValue>BszunMMbZne3vpiOesSTxmgNNKWs2oMvqW6wscyWw/4S5CY6SqE9RKfrTq0xSt8q3ZzgYAUxCGdq&#13;
+nWufUTl7Jo0bFyz+lpME/Ukr/xIWXNtG/oK87O4AD159iYa23yhdXgrTOxUHxngv3cwDQi1SsFu5&#13;
+ZBjvwcYaoIt55FofDA43mRJ3mgX9RiH7hCDnFyMHnUNoo0tWuTWv0KGZ4eHuK0Pxf91J/F5+3ihO&#13;
++pdrqKySFkE/ih3AlC+pKHSQ8nX4+TD6ZgwoVDxTMbInilW7x+QnrCcs+3ziRiGWGcrW7TdPLQqL&#13;
+g6LtB5lASqj10J3s3Y11FYI93g1NvKzwQacceQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1106,4 +1106,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d8cf01d9-0fb4-4250-8357-f261577f7fbf" Target="#_d7bf0441-9173-4baf-8269-9ae63118dd50"><Timestamp>2024-05-02 07:08:10</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b7bacca9-8afb-4bae-a8fc-d61068d0c9d3" Target="#_30532d2d-0f4a-4a57-97af-5cdfc89c64e5"><Timestamp>2024-05-02 07:09:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
