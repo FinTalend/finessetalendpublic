@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <TalendMetadata:DatabaseConnection AdditionalParams="" DatabaseType="Microsoft SQL Server" DatasourceName="" DbmsId="id_MSSQL" DriverClass="net.sourceforge.jtds.jdbc.Driver" FileFieldName="" NullChar="" Password="enc:system.encryption.key.v1:W8TipfpiB4Eq2gpxb16Z0kQxsa3p0yMylQCtSzdIsRY84BJ8k67493o=" Port="1433" ProductId="SQL_SERVER" SID="Talend_DW_Stg" SQLMode="false" ServerName="192.168.11.143" SqlSynthax="" StandardSQL="true" StringQuote="" URL="jdbc:jtds:sqlserver://192.168.11.143:1433/Talend_DW_Stg;" UiSchema="dbo" Username="Sqluser2" dataPackage="_SUGZYAhLEe-IVLttA5QFSQ" dbVersionString="JTDS" id="_30uXkAhKEe-IVLttA5QFSQ" label="AdventureWorks_Stg1" name="AdventureWorks_Stg1" supportNLS="false" xmi:id="_SSVe0AhLEe-IVLttA5QFSQ">
+    <taggedValue tag="Is Conn Need Reload" value="false" xmi:id="_SSVe0QhLEe-IVLttA5QFSQ"/>
+    <taggedValue tag="package filter" value="" xmi:id="_STJ-MAhLEe-IVLttA5QFSQ"/>
+    <taggedValue tag="Status" value="" xmi:id="_STJ-MQhLEe-IVLttA5QFSQ"/>
+    <taggedValue tag="Version" value="0.1" xmi:id="_STJ-MghLEe-IVLttA5QFSQ"/>
+    <taggedValue tag="Purpose" value="" xmi:id="_STJ-MwhLEe-IVLttA5QFSQ"/>
+    <taggedValue tag="Description" value="" xmi:id="_STJ-NAhLEe-IVLttA5QFSQ"/>
+    <taggedValue tag="Author" value="" xmi:id="_STJ-NQhLEe-IVLttA5QFSQ"/>
+    <taggedValue tag="otherParameter" xmi:id="_STJ-NghLEe-IVLttA5QFSQ"/>
+    <taggedValue tag="DB ProductName" value="Microsoft SQL Server" xmi:id="_STqUgAhLEe-IVLttA5QFSQ"/>
+    <taggedValue tag="DB ProductVersion" value="12.00.2000" xmi:id="_STqUgQhLEe-IVLttA5QFSQ"/>
+    <taggedValue tag="DB IdentifierQuoteString" value="&quot;" xmi:id="_STqUgghLEe-IVLttA5QFSQ"/>
+    <parameters key="CONN_PARA_KEY_USERNAME" value="Sqluser2" xmi:id="_SSVe0ghLEe-IVLttA5QFSQ"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog dataManager="_SSVe0AhLEe-IVLttA5QFSQ" name="Talend_DW_Stg" xmi:id="_SUGZYAhLEe-IVLttA5QFSQ">
+    <ownedElement name="dbo" xmi:id="_SUGZYQhLEe-IVLttA5QFSQ" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+  </orgomg.cwm.resource.relational:Catalog>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_25f69542-e90e-4265-842c-b33d84c3cbe5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>p2q0MZMirChty9hLNRoQP5dgdWRAZZmvrdsuipI6AsuMUeHzddn03HOegCh623e9ahcP2um4wnok&#13;
+R5MxHjggEA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d52ab162-e530-4ba0-ad9c-da99f171701c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kDkdlSmnazfpCXMSZdU6Ta3tjsJdaX03ZWChIdR6BZbMtbKRAl9YGXise/jOCgK1PZdTNNgHsh9X&#13;
+iXiIQpelxQ==</DigestValue></Reference></SignedInfo><SignatureValue>E1tnm6V7W3dObBA3gDiTbhkOdjAtruQDyP8Vnl7tREAl0g3MgbBXpn88M4moZ9rV1QwQhh5urjVO&#13;
+v/eqdau3Tfd83SHVzan7Rn7L96mi4LWfCb+EP/f0vefC2X/dWpYE6FuX4XwIYdeHFWMqgq6EzogC&#13;
+2PygtsdtN3+dZqa6/x6ttcmOjSRXFVx9Hrl7mAAvopUhLqNcZu3jKPvE1vNxDJA/QtJcH6qQKgTU&#13;
+j+PtisptgeHirwFVArV5oK8HCeZiact1EFOa7o54fyuof/Y+loO5aC8Zlq96BfGV2DyfiwWfg5uY&#13;
+LP/Kkc1aTaRXRzAwJ540PaYorFlFV9LKFdhSQA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d52ab162-e530-4ba0-ad9c-da99f171701c" Target="#_25f69542-e90e-4265-842c-b33d84c3cbe5"><Timestamp>2024-05-02 06:14:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
