@@ -419,6 +419,21 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_lR2x4AkREe-IVLttA5QFSQ",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ - Customers",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_s8aogPvZEe6EVYHh9ozNMw",
     "version" : "0.1",
     "type" : "job"
