@@ -1203,10 +1203,10 @@
       <column comment="" key="true" length="10" name="OrderID" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="10" name="ProductID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
+      <column comment="" key="true" length="10" name="ProductID" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="10" name="EmployeeID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
+      <column comment="" key="true" length="10" name="EmployeeID" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="true" length="5" name="CustomerID" nullable="false" pattern="" precision="0" sourceType="NCHAR" type="id_String" usefulColumn="true">
@@ -1289,10 +1289,10 @@
       <column comment="" key="true" length="10" name="OrderID" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="10" name="ProductID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
+      <column comment="" key="true" length="10" name="ProductID" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="10" name="EmployeeID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
+      <column comment="" key="true" length="10" name="EmployeeID" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="true" length="5" name="CustomerID" nullable="false" pattern="" precision="0" sourceType="NCHAR" type="id_String" usefulColumn="true">
@@ -1740,13 +1740,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ecdb3ea6-4078-427c-ac73-e496d0ab0b1a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lu0eT6mTIMrF+by7lWtgSzHEOZKuhcD3yYcl/mxRIrFQHAHSuuX0PACTdy48cT9BykSKQ2VOxlxD&#13;
-4kobXgKGeA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_37ba0532-de71-487d-a8c8-1f2bf46fdbf5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NEUcRXmucRWTpNIJPGLFsGv/5ev9GyWHxL1snw577fyT3GUQQZvn7q7C6KjMXeSK/D8GZJxVsZ5a&#13;
-WYmuTqOesg==</DigestValue></Reference></SignedInfo><SignatureValue>dfD7zGl1v1K2ajke7Rf84ZUgiURs2w4kdFXGWr8AEw7AdrTepI/5S2XYgHbDTVVc5sfrM89Vd1T/&#13;
-PTdlZscyv6wD6VUbV+BMYQk5JTv6gZCnrvMwPvwMWIdsv4KjGV2i+znLDQ7vKzzJsUg+1BpJyaxS&#13;
-QhGy254z2+fMPwHKyVO7gU13+H9BXLIOFmmgqBkif8dMr6TlDDbg3WnD7U83ROUk7qalJeCU+tAa&#13;
-FNpVkLbAfK2aV2OrNPtjYMrIt9hDOUMbVul+cWMK3PzZhN13z1x6Bz8W0YSoo6s1oVs6DzRRPkD0&#13;
-nbgsoBOyEoU8fITgXo+3TEHlrjeT8ClhVzPIHQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c4005268-5aa4-4802-8306-578be0b833ce"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gu6iVGYDJw2NiGtTVjGOCbyQvuRC938dVeNT0D3a8ddUYw79xyjYyT1AMjWaLnUp8tXHOK6cmNTn&#13;
+oelaulQDpg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d3c8f694-119b-455e-a47d-8abcc5d0e3b9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9dOGrqw2bY0gDrK5z2zD1n6LU5znVSYpqP4Wr0lavPnrSpQ/fTxtPrXGF5DT1LrFrNVjaAl1fSeg&#13;
+jrZ72Roq+A==</DigestValue></Reference></SignedInfo><SignatureValue>ECGeUyagr1oYuhd5J1AJ7nDWsA23DvLvn4yi8qZtQowvRdwf7QkwIFt5phiQFBIcPzqOxdgQxzYg&#13;
+VcP8wUf1g0PHoVScBq6Aj6gOnDLZkwRV+m7dJh7i/FFY4BjN8bTMBGduIdrFhBfwIEoFfKDOT+D9&#13;
+wy1axzBfl4mDl1Xs3snoMWpTrjgviglIZDAcQLiTGkYbUmxzovEMmdPH2wlqWJqbx0eWOiyu1DkY&#13;
+imoIsKUNiM0fvjjqkGbNynK2JWQHuVNO8ymSkY4m1GNJTw/up1x7xgi6Ihqnmi+txvAS81tCyfVX&#13;
+R4E9wJMiBjdjhGwyPZDebWbrgzyjM/68B3je5Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1768,4 +1768,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_37ba0532-de71-487d-a8c8-1f2bf46fdbf5" Target="#_ecdb3ea6-4078-427c-ac73-e496d0ab0b1a"><Timestamp>2024-05-04 06:26:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d3c8f694-119b-455e-a47d-8abcc5d0e3b9" Target="#_c4005268-5aa4-4802-8306-578be0b833ce"><Timestamp>2024-05-04 06:27:30</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
