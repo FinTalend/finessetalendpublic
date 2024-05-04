@@ -311,19 +311,23 @@
     "version" : "Latest",
     "type" : "property"
   }, {
-    "id" : "_v_4CwAhsEe-IVLttA5QFSQ",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_v_4CwAhsEe-IVLttA5QFSQ - Dim_Customers",
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ - Customers",
     "version" : "Latest",
     "type" : "schema"
   }, {
-    "id" : "_v_4CwAhsEe-IVLttA5QFSQ - Dim_Employee",
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ - Employees",
     "version" : "Latest",
     "type" : "schema"
   }, {
-    "id" : "_v_4CwAhsEe-IVLttA5QFSQ - Dim_Products1",
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ - Order_Details",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ - Orders",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ - Products",
     "version" : "Latest",
     "type" : "schema"
   } ]
