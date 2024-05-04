@@ -558,8 +558,8 @@
       <column comment="" key="false" length="5" name="CustomerID" nullable="false" pattern="" precision="0" sourceType="NCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="ProductShipped" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ProductNotShipped" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProductShipped" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProductNotShipped" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -573,8 +573,8 @@
         <mapperTableEntries expression="Products.ProductID " name="ProductID" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="Employee.EmployeeID " name="EmployeeID" type="id_Integer"/>
         <mapperTableEntries expression="Customers.CustomerID " name="CustomerID" type="id_String"/>
-        <mapperTableEntries expression="Var.var1 " name="ProductShipped" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="Var.var2 " name="ProductNotShipped" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Var.var1 " name="ProductShipped" type="id_String"/>
+        <mapperTableEntries expression="Var.var2 " name="ProductNotShipped" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="OrderDetails" sizeState="INTERMEDIATE">
         <mapperTableEntries name="OrderID" type="id_Integer"/>
@@ -810,8 +810,8 @@
       <column comment="" key="false" length="5" name="CustomerID" nullable="false" pattern="" precision="0" sourceType="NCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="ProductShipped" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ProductNotShipped" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProductShipped" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProductNotShipped" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="320">
@@ -914,8 +914,8 @@
       <column comment="" key="false" length="5" name="CustomerID" nullable="false" pattern="" precision="0" sourceType="NCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="ProductShipped" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ProductNotShipped" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProductShipped" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProductNotShipped" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="10" name="OrderID" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -930,8 +930,8 @@
       <column comment="" key="false" length="5" name="CustomerID" nullable="false" pattern="" precision="0" sourceType="NCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="ProductShipped" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ProductNotShipped" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProductShipped" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProductNotShipped" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -989,13 +989,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a8f9fa9b-1cd7-4c03-8c84-b8c5053543c9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gFJFr9PiublnsqKTgeqgxayCdGOkpXB5lE7YBEIBj4mNbEcynUJgENJUznMm61Sj7iYzVSPmLvkf&#13;
-/K2kuGg4WA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ef6ad9b2-28ed-4252-8322-cf8cc5480102"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jtTYGQtYOxIx2UQhVcuXSKEeC/V72mjcygS8se5k4dUTyIMwRvgJc0IPT/hUCwFuqJEyTFAPeZhw&#13;
-gUHsBb2N+Q==</DigestValue></Reference></SignedInfo><SignatureValue>d2MoiPIbZEDDQVF52Fy/qwfa95R6BbFUoJFDMBIAM+fn7AELCW+lmWPEO3pIGwga8Ux8+9Jz3Ftk&#13;
-/FlZM6TWpZ0Ho8i9CCcMioExXn6zFX4Ak29daiODCE6Ncr2OhtSE1yTvU6NSMAcd1gk9dxir9QsQ&#13;
-S7ZCqi7JVyX/cRJqrgDd7oksbgdmzOmQRfjJ3lbloKxs2w5RK/rhQIf4sWlXqIF1b32f9AkB2QSq&#13;
-oxQQHjQ91j31RvaTBmGgEI9merId8DdYgSJ4RMsoi6WRNrZExNe/t52G+rRS059P9taauFj8Sc7X&#13;
-Wzz3L2aCCqVwJEf8sPPZmgtyqV+kSDmOIhuzMg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d04f543a-96c6-4b03-90f4-433de976c0f2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SBT6XF1no4KLHQ2Vr5s81HHAcd+wBpaZD+1X6L3WLfXq1Z8XEKjC390lTol5Q1JqHOqaDmt0uXZw&#13;
+meC0xvc2vA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a20451e9-f1a4-4c1c-946c-fa8157fd09a7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HgIjc/oB8Oyp711bL67iJyLJXb+c51BZPWCFEO42UmAPUuS5wMYtWSX1F70m2JwRYvebyCfsSUhp&#13;
+ZJrjjmhtNg==</DigestValue></Reference></SignedInfo><SignatureValue>LNgSCZP8CbkBsQaz0XMOiT0RXL+zvzfn/bRVYLTxnqUikrGU4CKAFPUsWBzmFIbJHku4i27KLpHx&#13;
+tDkBdoKW07flV80pgpW+XhmgchEC5etqIOsVgUzSncKsa+PNeg/Y2AOlJztrXXdttrQ617JzwCYD&#13;
+iZKM/jqLiHJgR3qowOpLeihKlKpBHyrW7Q37tmyA3blijw8Rzct9VGq6D5AioA9UOW3yR+rjjmQN&#13;
+2OY1ogxzMpMbS+XLtuI+CuouGomYRgyWrPE5LGvpQdvn85efYPN8dEu2bhKXS2uLUdtFKSNAIr1V&#13;
+yKt39495PSVOloy6FvYi+Uzdzw2aeuP8Zq+8uQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1017,4 +1017,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ef6ad9b2-28ed-4252-8322-cf8cc5480102" Target="#_a8f9fa9b-1cd7-4c03-8c84-b8c5053543c9"><Timestamp>2024-05-04 04:05:21</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a20451e9-f1a4-4c1c-946c-fa8157fd09a7" Target="#_d04f543a-96c6-4b03-90f4-433de976c0f2"><Timestamp>2024-05-04 04:08:43</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
