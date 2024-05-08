@@ -625,6 +625,10 @@
     "id" : "_fiseoAhsEe-IVLttA5QFSQ - Suppliers",
     "version" : "Latest",
     "type" : "schema"
+  }, {
+    "id" : "_v_4CwAhsEe-IVLttA5QFSQ - Orders_Fact_Table",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
