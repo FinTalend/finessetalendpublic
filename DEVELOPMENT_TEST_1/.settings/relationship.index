@@ -692,6 +692,10 @@
     "id" : "_fiseoAhsEe-IVLttA5QFSQ - Customers",
     "version" : "Latest",
     "type" : "schema"
+  }, {
+    "id" : "_v_4CwAhsEe-IVLttA5QFSQ - Dim_Customers",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
