@@ -573,6 +573,65 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_ndZvYA0iEe-IVLttA5QFSQ",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_v_4CwAhsEe-IVLttA5QFSQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ - Authors",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ - Books",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ - Borrowings",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ - Categories",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ - Customers",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ - Employees",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ - Order_Details",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ - Orders",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ - Products",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ - Shippers",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_fiseoAhsEe-IVLttA5QFSQ - Suppliers",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_rL_RYAk6Ee-IVLttA5QFSQ",
     "version" : "0.1",
     "type" : "job"
