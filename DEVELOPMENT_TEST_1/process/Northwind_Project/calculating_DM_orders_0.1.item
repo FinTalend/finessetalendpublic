@@ -127,7 +127,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#13;&#10;    YEAR(OrderDate) AS OrderYear,&#13;&#10;    MONTH(OrderDate) AS OrderMonth,&#13;&#10;    (SELECT SUM(RevenueSales)&#13;&#10;     FROM dbo.Datamart_order_Items AS inner_tbl&#13;&#10;     WHERE YEAR(OrderDate) = YEAR(OrderDate)&#13;&#10;       AND MONTH(OrderDate) &lt;= MONTH(OrderDate)) AS YTD&#13;&#10;&#13;&#10;FROM &#13;&#10;    dbo.Datamart_order_Items AS outer_tbl&#13;&#10;GROUP BY &#13;&#10;    YEAR(OrderDate), &#13;&#10;    MONTH(OrderDate)&#13;&#10;ORDER BY &#13;&#10;    YEAR(OrderDate), &#13;&#10;    MONTH(OrderDate)&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT&#13;&#10;&#9;OrderDate, &#13;&#10;    YEAR(OrderDate) AS OrderYear,&#13;&#10;    MONTH(OrderDate) AS OrderMonth&#13;&#10;&#13;&#10;FROM &#13;&#10;    dbo.Datamart_order_Items AS outer_tbl&#13;&#10;GROUP BY &#13;&#10;    YEAR(OrderDate), &#13;&#10;    MONTH(OrderDate),&#13;&#10;    OrderDate&#13;&#10;ORDER BY &#13;&#10;    YEAR(OrderDate), &#13;&#10;    MONTH(OrderDate),&#13;&#10;&#9;OrderDate&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -138,11 +138,11 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="OrderDate"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="OrderYear"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="OrderMonth"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="YTD"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
@@ -150,9 +150,9 @@
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_1">
+      <column comment="" key="false" length="23" name="OrderDate" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="OrderYear" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="OrderMonth" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="YTD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="64">
@@ -202,17 +202,17 @@
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="OrderDate"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="OrderYear"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="OrderMonth"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="YTD"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -228,14 +228,14 @@
     <elementParameter field="TEXT" name="LABEL" value="Northwind_Target"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
+      <column comment="" key="false" length="23" name="OrderDate" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="OrderYear" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="OrderMonth" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="YTD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="23" name="OrderDate" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="OrderYear" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="OrderMonth" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="YTD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -954,13 +954,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f5af1edb-a079-4b91-814c-ecda49ab6d65"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>r0N5tBAUS6ggEXDceJUemIZuz+RMgqODnNEwv583yeWrX2yKUzb3ET8jOhqrzCNVEmTJMog6Nxuf&#13;
-k5ofqoW70A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_41b4c579-5b02-47b4-bcbf-9bd059b33fb7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XktR9fNzrRBiGG0C/FJdi4iw1BO3KU6kGsgRA6pbKEOnHN3QDmX+Sah4XCoYH3O16GLHZHhXv4hZ&#13;
-0oXcvWoOCA==</DigestValue></Reference></SignedInfo><SignatureValue>Vd6iEqLBxZutDK8NZZccqnv3Z/OUOoO4YqGIxsdjj5t/nK8eeni0F7ae1NOV2UB7ChG0BE4iLi8t&#13;
-zjfHa80bTv/gGwsS4ktoZ4H1V0y25CtRwvbGlggt1xljeE9hdaSKmEpRJsryU65ezGRbdtRKvvJ/&#13;
-KiYKCWXjuixoIy4/aWJRyTRd10UKV/bxriw/bYFM57CX0zSWWP1xbHB/ty7X3gsCS9xiYv7Bg39L&#13;
-VKiCStgk0/pKQSu2qGlBKWQVILgEz3eWZBqlypqI7pkf9f5NrmjIRFL7swi/f8/1T23z/KCrjzXm&#13;
-QN7AHXuXxPGlvt5JD5XfXIprDkixCv7OVSRdpw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2655c208-2f29-4f6c-8145-fada578ea472"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VwjGQLDbnyfG2WKrdy2gwgfXXvY6O+BNXT6Whnhd35H99pbSr01I+vRIJI2dxaDOgFLD0kvIhMFi&#13;
+55bDh0oxGQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_69998549-7198-4e52-87a1-f6b6ad60eb5a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>w0Jy7teNpJO5uNgwfhnEnu3aSLKGMgBc2lGVwP5eC+7V6wqJWf18cgv6ivtYOpxM5kklb5p4w9n3&#13;
+j+Y1Rphdrw==</DigestValue></Reference></SignedInfo><SignatureValue>YmbVW5LzCiRTH4RRyvA1TsOj7tKZ9+s4Z+az3XrSe0fTStNtWsVviC5egW27lL9GZYFZTqyUGtWX&#13;
+Bx4hFdPFiafFMAqo5GW8uvT/yuEwYbedQSpUrwPp2Z2WMHM4LIc9faq2PUMp29MKrn5yDnsIaHgR&#13;
+YdJ6MlkuO2upjapEMUCx/Wgq+Xsl+62bVXmY7GNseArj6HcW5Ywusg1qbHUqxAC1yOK3tKsaRel/&#13;
+caRhwzbEPk69UIITwdxOV2cBWOlgf39n3o9Cbz2Uuz3yPz39TH4YA+vl0agkPd6E7B4H4T6LKuAA&#13;
+HRGD4R9G1hdzjr43uDXJ1ht1h4vLkiS1UVA6zg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -982,4 +982,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_41b4c579-5b02-47b4-bcbf-9bd059b33fb7" Target="#_f5af1edb-a079-4b91-814c-ecda49ab6d65"><Timestamp>2024-05-09 11:19:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_69998549-7198-4e52-87a1-f6b6ad60eb5a" Target="#_2655c208-2f29-4f6c-8145-fada578ea472"><Timestamp>2024-05-09 11:35:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
