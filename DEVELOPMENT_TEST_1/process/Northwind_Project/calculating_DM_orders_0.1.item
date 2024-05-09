@@ -127,7 +127,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#13;&#10;    YEAR(outer_tbl.OrderDate) AS OrderYear,&#13;&#10;    MONTH(outer_tbl.OrderDate) AS OrderMonth,&#13;&#10;    SUM(inner_tbl.RevenueSales) AS YTD&#13;&#10;FROM &#13;&#10;    dbo.Datamart_order_Items AS outer_tbl&#13;&#10;JOIN&#13;&#10;    dbo.Datamart_order_Items AS inner_tbl&#13;&#10;ON&#13;&#10;    YEAR(inner_tbl.OrderDate) = YEAR(outer_tbl.OrderDate)&#13;&#10;    AND MONTH(inner_tbl.OrderDate) &lt;= MONTH(outer_tbl.OrderDate)&#13;&#10;GROUP BY &#13;&#10;    YEAR(outer_tbl.OrderDate), &#13;&#10;    MONTH(outer_tbl.OrderDate)&#13;&#10;ORDER BY &#13;&#10;    YEAR(outer_tbl.OrderDate), &#13;&#10;    MONTH(outer_tbl.OrderDate)&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#13;&#10;    YEAR(OrderDate) AS OrderYear,&#13;&#10;    MONTH(OrderDate) AS OrderMonth,&#13;&#10;    (SELECT SUM(RevenueSales)&#13;&#10;     FROM dbo.Datamart_order_Items AS inner_tbl&#13;&#10;     WHERE YEAR(inner_tbl.OrderDate) = YEAR(outer_tbl.OrderDate)&#13;&#10;       AND MONTH(inner_tbl.OrderDate) &lt;= MONTH(outer_tbl.OrderDate)) AS YTD ,&#13;&#10; &#13;&#10;&#9; (SELECT SUM(RevenueSales)&#13;&#10;     FROM dbo.Datamart_order_Items AS inner_tbl&#13;&#10;     WHERE YEAR(inner_tbl.OrderDate) = YEAR(outer_tbl.OrderDate)-1&#13;&#10;       AND MONTH(inner_tbl.OrderDate) &lt;= MONTH(outer_tbl.OrderDate)) AS LYTD ,&#13;&#10; &#13;&#10;&#9;   (SELECT SUM(RevenueSales)&#13;&#10;     FROM dbo.Datamart_order_Items AS inner_tbl&#13;&#10;     WHERE YEAR(inner_tbl.OrderDate) = YEAR(outer_tbl.OrderDate)&#13;&#10;       AND MONTH(inner_tbl.OrderDate) = MONTH(outer_tbl.OrderDate)) AS MTD,&#13;&#10; &#13;&#10;&#9;   &#9;   (SELECT SUM(RevenueSales)&#13;&#10;     FROM dbo.Datamart_order_Items AS inner_tbl&#13;&#10;     WHERE YEAR(inner_tbl.OrderDate) = YEAR(outer_tbl.OrderDate)    &#13;&#10;       AND MONTH(inner_tbl.OrderDate) = MONTH(outer_tbl.OrderDate)-1) AS LMTD&#13;&#10;FROM &#13;&#10;    dbo.Datamart_order_Items AS outer_tbl&#13;&#10;GROUP BY &#13;&#10;    YEAR(OrderDate), &#13;&#10;    MONTH(OrderDate)&#13;&#10;ORDER BY &#13;&#10;    YEAR(OrderDate), &#13;&#10;    MONTH(OrderDate)&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -144,6 +144,12 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="YTD"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LYTD"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MTD"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LMTD"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
@@ -153,6 +159,9 @@
       <column comment="" defaultValue="" key="false" length="10" name="OrderYear" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="OrderMonth" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="YTD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="LYTD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="MTD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="LMTD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="64">
@@ -217,6 +226,21 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LYTD"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MTD"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LMTD"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
@@ -231,11 +255,17 @@
       <column comment="" defaultValue="" key="false" length="10" name="OrderYear" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="OrderMonth" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="YTD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="LYTD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="MTD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="LMTD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" defaultValue="" key="false" length="10" name="OrderYear" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="OrderMonth" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="YTD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="LYTD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="MTD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="LMTD" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -249,6 +279,7 @@
     <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
     <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMSSqlInput"/>
     <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
@@ -479,6 +510,7 @@
     <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
     <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMSSqlInput"/>
     <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
@@ -709,6 +741,7 @@
     <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
     <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMSSqlInput"/>
     <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
@@ -954,13 +987,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c910dbb8-5a7c-4548-9cea-fb79f30a064a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MPQ6A2Otfc1MUqzD9EItX+ry3eTUo3mnuBOXvgwr2CC7dx6e+bEtCkrVQ9xEn1mSoccTBKxF5yhN&#13;
-MtEeqYL3TQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3d72eb36-cf6a-450d-a5a7-912942aaee03"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>f31YFjP/VpHG5JCjjaCFCGXhMjSHbI1g5jZaxfJz5RNrT1DQEuLXr3RO4Auo5xWs1KNqekxFupV8&#13;
-0AWHlsCLvw==</DigestValue></Reference></SignedInfo><SignatureValue>NbEoxpbD7I/heK89hlY5gW71CTFHwvitn0TNbmmETRRJ7J/Ds03+T2ZG1Gl7uyd6bOJr/9C61rVK&#13;
-ij6j9sUmxoxsw2lbAcVDG+3mU6Td6HMpjpBwIYml2PTaZcdnsJ514Gn4M+aI5y9/hm91APZea0mn&#13;
-cmstkbGVBRflgEF5qwFncVfogyWwc50XGVu/tBKpuGBz7NGuHegeUSk0dVoaYKuVJQfDees9E4/k&#13;
-j6qmj3hHCQ7bo+41Xzk2acImSjCJivq+TqZa2VcDD+9VZeOvQ7wsKyvzsY5CXgjX4qYtTGJvMziI&#13;
-h9fn4MvEQX8Cxgy9gaFqM3BGlWeePnuzQQZwUA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cf909e0e-5a6e-4382-9fdb-fa5d8c0c88e1"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Wnv1lLM6tRHF77V2ADfiveYTAoZO2PpmIWgKWRfEPgHLska49nuEpFN/KfBjfa09LacjuHd6PrWB&#13;
+Bdy4BMGgtg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d15f94c1-4619-4fb4-a3be-6ab8382959e8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WkxZoxED9XlXiIMdgkuRLr0rAqjwocSoW8lLmd6mSuIGb8HpQ6Yku3ckjHHOX9hQ7H4F1c+RyvUd&#13;
+rh3t9QvF3g==</DigestValue></Reference></SignedInfo><SignatureValue>HC+vWnQFbSZg58gsBcBgijn4krX3x3HiLa4aviChmEb3jbrQffM3jYTIAMvNwUiOOzM0clQ8qVnn&#13;
+ptMM3g2c80bxX6MbrTcjKUEZcfTMF320hWzCOJ4ECaVlPC5WkYscP3ZilJ0PbnHyxtsYRxH1lTon&#13;
+CrPqlVyhXjca2Zyi8BPc2bJIbeo1YpMutytdlkOjcKGEU+3pSPTR6FiNV6hA/cYU6CYDRCb/DP/8&#13;
+tNM6zaxhZM9GBmNsvcyKP3NFxotaHtpGcvL6oSmu7O2W8ZT31IYZNzhbg+m9GSoi7x4B0v4ZTM5L&#13;
+PF+pPzfpqJjDyCjk0TVfB/B6w2upjTY81i4Rlw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -982,4 +1015,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3d72eb36-cf6a-450d-a5a7-912942aaee03" Target="#_c910dbb8-5a7c-4548-9cea-fb79f30a064a"><Timestamp>2024-05-09 11:55:29</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d15f94c1-4619-4fb4-a3be-6ab8382959e8" Target="#_cf909e0e-5a6e-4382-9fdb-fa5d8c0c88e1"><Timestamp>2024-05-09 12:13:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
