@@ -175,6 +175,21 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_AjOYsA3xEe-IVLttA5QFSQ",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_v_4CwAhsEe-IVLttA5QFSQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_v_4CwAhsEe-IVLttA5QFSQ - Datamart_order_Items",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_KBQ-MPseEe6EVYHh9ozNMw",
     "version" : "0.1",
     "type" : "job"
