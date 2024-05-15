@@ -226,10 +226,6 @@
     "version" : "Latest",
     "type" : "property"
   }, {
-    "id" : "_FO3ewBHeEe-IVLttA5QFSQ - Currency",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
     "id" : "_FO3ewBHeEe-IVLttA5QFSQ - CurrencyRate",
     "version" : "Latest",
     "type" : "schema"
