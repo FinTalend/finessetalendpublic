@@ -2252,16 +2252,16 @@
       <column comment="" key="false" length="50" name="Group" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="'(0.00)'" key="false" length="19" name="SalesYTD" nullable="false" pattern="" precision="4" sourceType="VARBINARY" type="id_Object" usefulColumn="true">
+      <column comment="" defaultValue="'(0.00)'" key="false" length="19" name="SalesYTD" nullable="false" pattern="" precision="4" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="'(0.00)'" key="false" length="19" name="SalesLastYear" nullable="false" pattern="" precision="4" sourceType="VARBINARY" type="id_Object" usefulColumn="true">
+      <column comment="" defaultValue="'(0.00)'" key="false" length="19" name="SalesLastYear" nullable="false" pattern="" precision="4" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="'(0.00)'" key="false" length="19" name="CostYTD" nullable="false" pattern="" precision="4" sourceType="VARBINARY" type="id_Object" usefulColumn="true">
+      <column comment="" defaultValue="'(0.00)'" key="false" length="19" name="CostYTD" nullable="false" pattern="" precision="4" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="'(0.00)'" key="false" length="19" name="CostLastYear" nullable="false" pattern="" precision="4" sourceType="VARBINARY" type="id_Object" usefulColumn="true">
+      <column comment="" defaultValue="'(0.00)'" key="false" length="19" name="CostLastYear" nullable="false" pattern="" precision="4" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="'newid()'" key="false" length="36" name="rowguid" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object" usefulColumn="true">
@@ -2285,16 +2285,16 @@
       <column comment="" key="false" length="50" name="Group" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="'(0.00)'" key="false" length="19" name="SalesYTD" nullable="false" pattern="" precision="4" sourceType="VARBINARY" type="id_Object" usefulColumn="true">
+      <column comment="" defaultValue="'(0.00)'" key="false" length="19" name="SalesYTD" nullable="false" pattern="" precision="4" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="'(0.00)'" key="false" length="19" name="SalesLastYear" nullable="false" pattern="" precision="4" sourceType="VARBINARY" type="id_Object" usefulColumn="true">
+      <column comment="" defaultValue="'(0.00)'" key="false" length="19" name="SalesLastYear" nullable="false" pattern="" precision="4" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="'(0.00)'" key="false" length="19" name="CostYTD" nullable="false" pattern="" precision="4" sourceType="VARBINARY" type="id_Object" usefulColumn="true">
+      <column comment="" defaultValue="'(0.00)'" key="false" length="19" name="CostYTD" nullable="false" pattern="" precision="4" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="'(0.00)'" key="false" length="19" name="CostLastYear" nullable="false" pattern="" precision="4" sourceType="VARBINARY" type="id_Object" usefulColumn="true">
+      <column comment="" defaultValue="'(0.00)'" key="false" length="19" name="CostLastYear" nullable="false" pattern="" precision="4" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="'newid()'" key="false" length="36" name="rowguid" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object" usefulColumn="true">
@@ -3920,13 +3920,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_efddd5cb-a21d-49a3-aa36-7a0774adc403"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>K/GnXGezpeSWuOWzSbXGX0ie00nPLlXAN1R/8M+SD4QEYeq4wwWRtwTkRIekyyMrv3RDyNp2iTnr&#13;
-Ds26DthqUw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9d1aa6ce-54a1-49b6-87ae-ba726e7a287e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>H5JWLmdbEvvifLImqy4Yg7+wKVmV0rkD969Dgk8oPqZarFozwtN5uZRjJTHCbBXF153LjPWjc0IR&#13;
-Oy0dijJTlQ==</DigestValue></Reference></SignedInfo><SignatureValue>nqSJCl/UibfNZQNV2KiFv1TI7q3Cvr7m0hceeRA35XqiuWeCs4mNS9q/BrzFisBYYCJZF7i0DL5i&#13;
-eRONR58qio07nAcF1yWsWzvhnx5zlgATR0HK/obYMr+xyyRnGXU85rquElQyOyf/OPu595WK/4yC&#13;
-dq7mR8iLW5byfe9xPBZekR9smMU/wjHjzxZa/XZ4AH08GG7lBQS86yos12P6HJU7h0x6BYruylbq&#13;
-nPuhePXDBIVsb5MFDi6Eko8XYz8oYFUUHxUyjeFWQOmdKJXqgXSqO2PhC7Ai8wLuBtdzG2L0/FI8&#13;
-J1cnw7PGhvIQ8SLQwAD5wRvbhEWkTsMUHlgHEg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e067300c-e19e-4793-b02d-804f4a92db7d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Fg/7iDozFuwHtbysLYRgmrn286lHTeuKCIRqlQj0ar4ymEOXB8hmAUsMZnimjPnnDKMfGXmjXqfG&#13;
+mUzYkP1+yA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_40b18e0e-5772-4d92-a809-7ae7524859db"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4d3/V8eQX1Sq4Sp8h9u0VWf56IJST+A/Xng/IdhGvUrcXp6kWtOwkPLFt5FoIUOGchXwP/HmFwdz&#13;
+xW0m9T9YTA==</DigestValue></Reference></SignedInfo><SignatureValue>hp1iVZrKi1YbzrnURxvYml61lyowON1vX8ODuK5SSlpPr7H9rLPHqpcG8jBMUZeQ1pVFCVBUoRGA&#13;
+rJCly0DEzAE2qu4Z7qUaMKc8R43cR1at2LydAlni7pjfh+kV4TTlZwN0vdT0EJ8FelzRwPshGLan&#13;
+/KbhcZP5HudHnVfmYStKijDi6IoFob+/RH99cRKcn1lL5W2TzGl4H999VbpVRTAgXgHJOZSS6Y28&#13;
+iWo2EXI4OBJWMPZ9/J5ztihflc2l8PLW9Lkez2bkSzntuFOwSsSJpvBj75QGd6evIBOo6IAJX7FB&#13;
+5RgqhUfQRJCtbVKFgoPdud9KO2+W16t1Nt8OUw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3948,4 +3948,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9d1aa6ce-54a1-49b6-87ae-ba726e7a287e" Target="#_efddd5cb-a21d-49a3-aa36-7a0774adc403"><Timestamp>2024-05-15 06:42:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_40b18e0e-5772-4d92-a809-7ae7524859db" Target="#_e067300c-e19e-4793-b02d-804f4a92db7d"><Timestamp>2024-05-15 06:48:14</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
