@@ -153,7 +153,7 @@
       <column comment="" key="true" length="3" name="CurrencyCode" nullable="false" pattern="" precision="0" sourceType="NCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="Name" nullable="false" pattern="" precision="0" sourceType="NAME" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="Name" nullable="false" pattern="" precision="-1" sourceType="NAME" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="'getdate()'" key="false" length="23" name="ModifiedDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
@@ -177,13 +177,13 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="DimCurrency" name="DimCurrency">
       <column comment="" key="true" length="-1" name="CurrencyKey" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CurrencyCode" nullable="false" pattern="" precision="-1" sourceType="NCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="3" name="CurrencyCode" nullable="false" pattern="" precision="0" sourceType="NCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="-1" name="Name" nullable="false" pattern="" precision="-1" sourceType="NAME" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="ModifiedDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="23" name="ModifiedDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
@@ -282,25 +282,25 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="DimCurrency" name="tDBOutput_1">
       <column comment="" key="true" length="-1" name="CurrencyKey" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CurrencyCode" nullable="false" pattern="" precision="-1" sourceType="NCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="3" name="CurrencyCode" nullable="false" pattern="" precision="0" sourceType="NCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="-1" name="Name" nullable="false" pattern="" precision="-1" sourceType="NAME" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="ModifiedDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="23" name="ModifiedDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
     <metadata connector="REJECT" label="DimCurrency" name="REJECT">
       <column comment="" key="true" length="-1" name="CurrencyKey" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CurrencyCode" nullable="false" pattern="" precision="-1" sourceType="NCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="3" name="CurrencyCode" nullable="false" pattern="" precision="0" sourceType="NCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="-1" name="Name" nullable="false" pattern="" precision="-1" sourceType="NAME" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="ModifiedDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="23" name="ModifiedDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -3923,13 +3923,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_de237ba7-8a5f-499c-bf36-f99cd2416f9e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DpIvxq8RLbFY6p0dcAyBT2vllRfV3CpnPoUywAvaw5Y4Ht6xdYbwpK73l/DAGbcr/siBQ90VTuvu&#13;
-MHEsNYdBIw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5cc245d2-e05d-4b37-afd2-2368a9a7f251"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OFBRlxoKgg1Drlg/g7Zg6uiOJKv6NyQK0pSQ8mEcmpibHowW5j43nXdXveeYLB1oOwBYc5r1ZbZ/&#13;
-3fFIecLi4g==</DigestValue></Reference></SignedInfo><SignatureValue>njxeiricQzJYsrKkBtlGhnu05460smDB08YPGx4ef4aHqB2U9QdXmysg3aF+gRbDUllNiWZOC0YY&#13;
-T+fe4mOwgL/WqDCcG0l3V1Dp25Ajd2i2iSf+/TTA72QDBJ/tMEqhwtBdd9NEiyMWJxFhY9Cj0qPy&#13;
-uLAZGAK+4Ojah8Wy4XRPLMzeJ4KCIL/H6mKFsDc/iyTNSB64jhZWTYPgHwDCAcs5eDCs7CJ+Um/x&#13;
-QwMC9Techit/gziJN1KdM0wFcbcq4+D62R541ysCdpKe1CwTLL1QrFhbXBQDusUROrTxreYx17Or&#13;
-2/bYd8v4VEKxBB3IhhxIFk1orTM8n9JriRJ9aw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_95b8fe61-1571-401c-b768-f4ba9a0a72c6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>F/MDQEea5dckvCEztShowPQsq7aILkixL9MciiA13+Kchm65Tkb5y5QFrOV43/J6JWgneEHWh9tE&#13;
+z8tJ6ex2nQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e0000ed5-5a95-4f2c-bb94-895d3282dcee"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ld0AgeeKCNkWb5vRVANLTAl7LV0Py0B17MqB7ny3zyUGyc7iAsW83zrXj8R7HWYcHYL2ihD0/TZt&#13;
+9Sm+gkR7mw==</DigestValue></Reference></SignedInfo><SignatureValue>J+r6PKhk98eZcFjcJH8gN/0m39x+zH0Lmk97PuJT51yQwrGteN3JBNNsvzaZ4O2xMWJsc6Z1AV5V&#13;
+6L7pwgFuIsWcWpoXxyYESohnLFJPVKyB8fW+8GsVB9hfC8rVk385skWglGV4xcODUkBBJQpmcI2E&#13;
+yFtd+FT6CX40+VI4eT+UZ0LZAsR3eZvPRMQMynCMmq4OkWSuT+frHpYKMb2Rke3D/W9Xd+Nj4nCD&#13;
+79LKHEbyZRrsHV5RqmuAXsVC1BLgF4hrFoe2hCERmbCc7O0DxVcKMN/w9oBLOlFs/RP9tRrn1S1F&#13;
+npclsUp9XGVMXRetcgvlgIzRqg72NjGkkzO3QA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3951,4 +3951,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5cc245d2-e05d-4b37-afd2-2368a9a7f251" Target="#_de237ba7-8a5f-499c-bf36-f99cd2416f9e"><Timestamp>2024-05-15 06:31:33</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e0000ed5-5a95-4f2c-bb94-895d3282dcee" Target="#_95b8fe61-1571-401c-b768-f4ba9a0a72c6"><Timestamp>2024-05-15 06:32:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
