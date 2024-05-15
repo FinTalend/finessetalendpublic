@@ -729,13 +729,13 @@
       <column comment="" defaultValue="'(1)'" key="false" length="1" name="OnlineOrderFlag" nullable="false" pattern="" precision="0" sourceType="FLAG" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="25" name="SalesOrderNumber" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="25" name="SalesOrderNumber" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="25" name="PurchaseOrderNumber" nullable="true" pattern="" precision="0" sourceType="ORDERNUMBER" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="25" name="PurchaseOrderNumber" nullable="true" pattern="" precision="0" sourceType="ORDERNUMBER" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="15" name="AccountNumber" nullable="true" pattern="" precision="0" sourceType="ACCOUNTNUMBER" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="15" name="AccountNumber" nullable="true" pattern="" precision="0" sourceType="ACCOUNTNUMBER" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="CustomerID" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -825,13 +825,13 @@
       <column comment="" defaultValue="'(1)'" key="false" length="1" name="OnlineOrderFlag" nullable="false" pattern="" precision="0" sourceType="FLAG" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="25" name="SalesOrderNumber" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="25" name="SalesOrderNumber" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="25" name="PurchaseOrderNumber" nullable="true" pattern="" precision="0" sourceType="ORDERNUMBER" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="25" name="PurchaseOrderNumber" nullable="true" pattern="" precision="0" sourceType="ORDERNUMBER" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="15" name="AccountNumber" nullable="true" pattern="" precision="0" sourceType="ACCOUNTNUMBER" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="15" name="AccountNumber" nullable="true" pattern="" precision="0" sourceType="ACCOUNTNUMBER" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="CustomerID" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -876,7 +876,7 @@
       <column comment="" key="false" length="128" name="Comment" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="'newid()'" key="false" length="36" name="rowguid" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Boolean" usefulColumn="true">
+      <column comment="" defaultValue="'newid()'" key="false" length="36" name="rowguid" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="'getdate()'" key="false" length="23" name="ModifiedDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
@@ -895,9 +895,9 @@
         <mapperTableEntries expression="row3.ShipDate " name="ShipDate" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="row3.Status " name="Status" type="id_String"/>
         <mapperTableEntries expression="row3.OnlineOrderFlag " name="OnlineOrderFlag" type="id_String"/>
-        <mapperTableEntries expression="row3.SalesOrderNumber " name="SalesOrderNumber" type="id_String"/>
-        <mapperTableEntries expression="row3.PurchaseOrderNumber " name="PurchaseOrderNumber" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row3.AccountNumber " name="AccountNumber" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.SalesOrderNumber " name="SalesOrderNumber" type="id_Integer"/>
+        <mapperTableEntries expression="row3.PurchaseOrderNumber " name="PurchaseOrderNumber" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row3.AccountNumber " name="AccountNumber" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row3.CustomerID " name="CustomerID" type="id_Integer"/>
         <mapperTableEntries expression="row3.SalesPersonID " name="SalesPersonID" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row3.TerritoryID " name="TerritoryID" nullable="true" type="id_Integer"/>
@@ -912,7 +912,7 @@
         <mapperTableEntries expression="row3.Freight " name="Freight" type="id_Integer"/>
         <mapperTableEntries expression="row3.TotalDue " name="TotalDue" type="id_Integer"/>
         <mapperTableEntries expression="row3.Comment " name="Comment" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row3.rowguid " name="rowguid" type="id_Boolean"/>
+        <mapperTableEntries expression="row3.rowguid " name="rowguid" type="id_Integer"/>
         <mapperTableEntries expression="row3.ModifiedDate " name="ModifiedDate" type="id_Date"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row3" sizeState="INTERMEDIATE">
@@ -923,9 +923,9 @@
         <mapperTableEntries name="ShipDate" nullable="true" type="id_Date"/>
         <mapperTableEntries name="Status" type="id_String"/>
         <mapperTableEntries name="OnlineOrderFlag" type="id_String"/>
-        <mapperTableEntries name="SalesOrderNumber" type="id_String"/>
-        <mapperTableEntries name="PurchaseOrderNumber" nullable="true" type="id_String"/>
-        <mapperTableEntries name="AccountNumber" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SalesOrderNumber" type="id_Integer"/>
+        <mapperTableEntries name="PurchaseOrderNumber" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="AccountNumber" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="CustomerID" type="id_Integer"/>
         <mapperTableEntries name="SalesPersonID" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="TerritoryID" nullable="true" type="id_Integer"/>
@@ -1160,13 +1160,13 @@
       <column comment="" defaultValue="'(1)'" key="false" length="1" name="OnlineOrderFlag" nullable="false" pattern="" precision="0" sourceType="FLAG" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="25" name="SalesOrderNumber" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="25" name="SalesOrderNumber" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="25" name="PurchaseOrderNumber" nullable="true" pattern="" precision="0" sourceType="ORDERNUMBER" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="25" name="PurchaseOrderNumber" nullable="true" pattern="" precision="0" sourceType="ORDERNUMBER" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="15" name="AccountNumber" nullable="true" pattern="" precision="0" sourceType="ACCOUNTNUMBER" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="15" name="AccountNumber" nullable="true" pattern="" precision="0" sourceType="ACCOUNTNUMBER" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="CustomerID" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -1211,7 +1211,7 @@
       <column comment="" key="false" length="128" name="Comment" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="'newid()'" key="false" length="36" name="rowguid" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Boolean" usefulColumn="true">
+      <column comment="" defaultValue="'newid()'" key="false" length="36" name="rowguid" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="'getdate()'" key="false" length="23" name="ModifiedDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
@@ -1241,13 +1241,13 @@
       <column comment="" defaultValue="'(1)'" key="false" length="1" name="OnlineOrderFlag" nullable="false" pattern="" precision="0" sourceType="FLAG" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="25" name="SalesOrderNumber" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="25" name="SalesOrderNumber" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="25" name="PurchaseOrderNumber" nullable="true" pattern="" precision="0" sourceType="ORDERNUMBER" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="25" name="PurchaseOrderNumber" nullable="true" pattern="" precision="0" sourceType="ORDERNUMBER" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="15" name="AccountNumber" nullable="true" pattern="" precision="0" sourceType="ACCOUNTNUMBER" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="15" name="AccountNumber" nullable="true" pattern="" precision="0" sourceType="ACCOUNTNUMBER" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="CustomerID" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -1292,7 +1292,7 @@
       <column comment="" key="false" length="128" name="Comment" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="'newid()'" key="false" length="36" name="rowguid" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Boolean" usefulColumn="true">
+      <column comment="" defaultValue="'newid()'" key="false" length="36" name="rowguid" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="'getdate()'" key="false" length="23" name="ModifiedDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
@@ -3925,13 +3925,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0b05b471-7e6b-4352-bfbe-e182dfea5d2f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DNVx2aCoWPPdWykNDrL7YejNyZphcQtYIrGLGgDylNN6BqI0PvucWJO1WZdFv8C9E2tjBRgIAxgd&#13;
-2uyjkeFkeA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_55e5132b-ac8a-4d68-ac1c-e8d69cb1bbdf"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>oBIJ0DJerXJ7I8Fl/5u/3XLVfQQfTEHMK+eMEoVCyDBYhquw9V9O2KROJvlHpQhIJ4gcddbJP28Y&#13;
-vEBsYH7YNg==</DigestValue></Reference></SignedInfo><SignatureValue>ZViIsHvjW2H6XzXETS/o6YQzwhpgfbM+NStyI4r2uj/vC/UGXX8yrTU//PKajDJXKTwMthWR9JA0&#13;
-r0ycDpJwC0j7iqKPEdggS2BaWWdiUK/6XYTEtkF1uGQQ4iPgnBqlPojwoKvYRgRHo7q/s9ZEaBXB&#13;
-hMWAdZ2XiWDt8ndj6ngjvcPTjQYBzWTIxB5UeZJSc6mCjoarV1dyaubBMplC3iU9byXSb/Bk31Ae&#13;
-EcmTOQBcXW7SMa5HD16YoK03FjNtA4wF4IP/KOrM3LCJssJ8x25ic3H/QzbCEsU/NycIMUTrno8X&#13;
-L1B+E9DuWfkU8Gwm4IoL13WF/SMS/Am4rCgH6A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1423f33a-ad5a-4d28-98ce-d6e9f6c056ba"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Lm4oRjP91BZagzrivT0P+dsEYJti4oAej2Ku6zktyVJmzzCl7U1PmqU6du68W44n7EGXDEWZF1Kg&#13;
++Fz6f12/vw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6237a413-b3b0-41a5-bc3e-b2539a1fc995"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ojwNTgyW25ciCgaMptt+BEaF9gWGlm8cDZc/Oy292g+d2scryeLpZte8nCIoYpFoQoccEwqRSN1c&#13;
+amYREnD3Dw==</DigestValue></Reference></SignedInfo><SignatureValue>kmDkoXxSGkKn6Yl8r/ly59i94DM+5u5pzRqHMc/vg6crPgi5qu8rN42J+6ixTO1xq7ldx+iH6i9N&#13;
+fjZpEtRQZYDVB4+DZE19Zv60hRAIf/gHhFmBdDVznJVM0/oZyBarC/5Ew/7iHg8LTcmo+x3tM3fj&#13;
+abE5RsDC2PudL6I4RgZZ2hCyqi1/A3MFRDy9GOFa6pqb0JKDOV9pPpvgRanJmyBpC6eM+YxMc8ua&#13;
+TDXVRWqbjeg+BIkwZUDpCK38ZTbbkfLsmdW1TJN90s9YHz5rrKfYUc5YWn/iBTZsBnHxcrqwp/if&#13;
+H9X5QC4i+D05bMAPiZWgRgOSZUxhUIHLIX0ffQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3953,4 +3953,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_55e5132b-ac8a-4d68-ac1c-e8d69cb1bbdf" Target="#_0b05b471-7e6b-4352-bfbe-e182dfea5d2f"><Timestamp>2024-05-15 05:57:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6237a413-b3b0-41a5-bc3e-b2539a1fc995" Target="#_1423f33a-ad5a-4d28-98ce-d6e9f6c056ba"><Timestamp>2024-05-15 06:00:13</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
