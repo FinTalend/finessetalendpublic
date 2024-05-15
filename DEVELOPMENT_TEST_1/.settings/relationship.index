@@ -213,6 +213,41 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_HyBPkBKwEe-IVLttA5QFSQ",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_eD5nMBH1Ee-IVLttA5QFSQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_eD5nMBH1Ee-IVLttA5QFSQ - DimCurrency",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_eD5nMBH1Ee-IVLttA5QFSQ - DimCustomer",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_eD5nMBH1Ee-IVLttA5QFSQ - DimSalesReason",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_eD5nMBH1Ee-IVLttA5QFSQ - DimSalesTerritory",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_eD5nMBH1Ee-IVLttA5QFSQ - Fact_SalesOrderHearderSalesReason",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_eD5nMBH1Ee-IVLttA5QFSQ - SalesFact",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_KBQ-MPseEe6EVYHh9ozNMw",
     "version" : "0.1",
     "type" : "job"
