@@ -246,10 +246,6 @@
     "version" : "Latest",
     "type" : "schema"
   }, {
-    "id" : "_FO3ewBHeEe-IVLttA5QFSQ - SalesTerritory",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
     "id" : "_FO3ewBHeEe-IVLttA5QFSQ - SalesTerritoryHistory",
     "version" : "Latest",
     "type" : "schema"
