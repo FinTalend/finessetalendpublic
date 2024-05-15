@@ -2609,8 +2609,6 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;AdventureWorks2014_S_New&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;Sqluser2&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:nqbx4KdmoGVcpi5ox0sUE/z+xlSwvjsT4C70QNczTOS+lsuQpUWrlYmhAg=="/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_FO3ewBHeEe-IVLttA5QFSQ - SpecialOffer"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;SpecialOffer&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -2644,8 +2642,6 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="MinQty"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="MaxQty"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="rowguid"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ModifiedDate"/>
       <elementValue elementRef="TRIM" value="false"/>
@@ -2682,9 +2678,6 @@
       <column comment="" key="false" length="10" name="MaxQty" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="'newid()'" key="false" length="36" name="rowguid" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
       <column comment="" defaultValue="'getdate()'" key="false" length="23" name="ModifiedDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -2712,7 +2705,7 @@
       <column comment="" key="false" length="255" name="Description" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="'(0.00)'" key="false" length="10" name="DiscountPct" nullable="false" pattern="" precision="4" sourceType="SMALLMONEY" type="id_Object" usefulColumn="true">
+      <column comment="" defaultValue="'(0.00)'" key="false" length="10" name="DiscountPct" nullable="false" pattern="" precision="4" sourceType="SMALLMONEY" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="50" name="Type" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
@@ -2733,9 +2726,6 @@
       <column comment="" key="false" length="10" name="MaxQty" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="'newid()'" key="false" length="36" name="rowguid" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
       <column comment="" defaultValue="'getdate()'" key="false" length="23" name="ModifiedDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -2747,14 +2737,13 @@
         <mapperTableEntries expression="Numeric.sequence(&quot;s1&quot;,1,1) " name="SpecialOfferKey" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row9.SpecialOfferID " name="SpecialOfferID" type="id_Integer"/>
         <mapperTableEntries expression="row9.Description " name="Description" type="id_String"/>
-        <mapperTableEntries expression="row9.DiscountPct " name="DiscountPct" type="id_Object"/>
+        <mapperTableEntries expression="row9.DiscountPct " name="DiscountPct" type="id_Integer"/>
         <mapperTableEntries expression="row9.Type " name="Type" type="id_String"/>
         <mapperTableEntries expression="row9.Category " name="Category" type="id_String"/>
         <mapperTableEntries expression="row9.StartDate " name="StartDate" type="id_Date"/>
         <mapperTableEntries expression="row9.EndDate " name="EndDate" type="id_Date"/>
         <mapperTableEntries expression="row9.MinQty " name="MinQty" type="id_Integer"/>
         <mapperTableEntries expression="row9.MaxQty " name="MaxQty" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="row9.rowguid " name="rowguid" type="id_Object"/>
         <mapperTableEntries expression="row9.ModifiedDate " name="ModifiedDate" type="id_Date"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row9" sizeState="INTERMEDIATE">
@@ -2767,7 +2756,6 @@
         <mapperTableEntries name="EndDate" type="id_Date"/>
         <mapperTableEntries name="MinQty" type="id_Integer"/>
         <mapperTableEntries name="MaxQty" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="rowguid" type="id_Object"/>
         <mapperTableEntries name="ModifiedDate" type="id_Date"/>
       </inputTables>
     </nodeData>
@@ -2869,11 +2857,6 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="rowguid"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ModifiedDate"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
@@ -2897,7 +2880,7 @@
       <column comment="" key="false" length="255" name="Description" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="'(0.00)'" key="false" length="10" name="DiscountPct" nullable="false" pattern="" precision="4" sourceType="VARBINARY" type="id_Object" usefulColumn="true">
+      <column comment="" defaultValue="'(0.00)'" key="false" length="10" name="DiscountPct" nullable="false" pattern="" precision="4" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="50" name="Type" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
@@ -2916,9 +2899,6 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="MaxQty" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="'newid()'" key="false" length="36" name="rowguid" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="'getdate()'" key="false" length="23" name="ModifiedDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
@@ -2933,7 +2913,7 @@
       <column comment="" key="false" length="255" name="Description" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="'(0.00)'" key="false" length="10" name="DiscountPct" nullable="false" pattern="" precision="4" sourceType="VARBINARY" type="id_Object" usefulColumn="true">
+      <column comment="" defaultValue="'(0.00)'" key="false" length="10" name="DiscountPct" nullable="false" pattern="" precision="4" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="50" name="Type" nullable="false" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
@@ -2952,9 +2932,6 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="MaxQty" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="'newid()'" key="false" length="36" name="rowguid" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="'getdate()'" key="false" length="23" name="ModifiedDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
@@ -3918,13 +3895,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_eda49f66-6ab9-4d18-8248-8c112810c88b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>oA8yqhwKU1jH3ozgF4ehKq5RsGDPcLAC08arh+8UL1HmIAoxTfGjQ78MM7SsqRp61tSOpVMajuaw&#13;
-UA1YKtoUmg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e0cc116f-0447-462c-a5f9-0055a7524411"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zUlRy45Uu66Wxq3TkGYUYgthkixyMgxBLBDCh7ZVOw77UJrvXA0BEIus8ww72EtIWmGjmaW6IBeb&#13;
-0AM+snGRgw==</DigestValue></Reference></SignedInfo><SignatureValue>keNj7Nfw46StEL8Vm1Mm533tXqldANizd6tlOdmebhYtSq+Nh4XM8cEKffcXCwGlGizw3640EGRV&#13;
-gX0V4+/3rcz2g5NgR+Z7vPlQpFV/V3XUaN7jz3+j48DC0xrfvu2YXx/pY7ZyouypnHPrYngJJDdy&#13;
-jatZb6UoKhm9NyisqqzewUyvwgHrwmMGog0Ql8E+7XumnIgUZVwx8CXCg934xXt+QiRB5HKDp/XS&#13;
-KjlZe29T/ytFovpMrTP0oMMnfbNDTkPKVR9BEDG/aLDPjpjZ62zBE5ablklHkEpgDxb13JCDa7xO&#13;
-wpzwRCDF4rNRCynuEzEDnrAFWGSL3zM9Wf9/Qg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_53409dd3-e1be-4bf3-a88b-524c389cbaf0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+f1MKaGcmCVhdQZTxRZaIpSxZK4MqiQDg1vW+vnJdWy8TqQpkDqoxijD6QrNj95pxTMyK4tKaWTi&#13;
+qpCJD1dBzA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_43b33285-6726-4ffd-9044-7e95d38fb9c1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BuKaw8jGCfxIV7szPIbjdPIEubUL3v7ZG7gPfivipzjgOlrKXZIaZWjrg5jTJjy/GHiLXuRzn8qc&#13;
+G6pQQ8zZ4g==</DigestValue></Reference></SignedInfo><SignatureValue>kqwzR+PSyXf1ve78XTiG03/CKsQQRF7cpcDdnwbg4QCeOAl5YWdUm8XHJTBpfDxMe0MicLeBk9gt&#13;
+md9nsdxsMiSM9pOHNUzpSF7+0CujwKjku9xhs7m5TYW9rDi2asw6pnkSHXTvgGT0u5X/WTQjjAHR&#13;
+hDQVmh2vShj8xiOA64GBW9OYqMqsp0eAcJrWVkVMWyUp6Ry+HToFJjf8KkjINqgAc5kluPwm/LQB&#13;
+buwvfGrgyCkZv0V+PLtzYHWpXt7unZ1CoK8pg8xz3Q82eH9rTAl8TklFfKhOcTAtNjYFRZynvzuK&#13;
+okW6p4rPR72IMPdtZu+HXeDrSodvUvUCjjzuWA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3946,4 +3923,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e0cc116f-0447-462c-a5f9-0055a7524411" Target="#_eda49f66-6ab9-4d18-8248-8c112810c88b"><Timestamp>2024-05-15 07:05:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_43b33285-6726-4ffd-9044-7e95d38fb9c1" Target="#_53409dd3-e1be-4bf3-a88b-524c389cbaf0"><Timestamp>2024-05-15 07:08:22</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

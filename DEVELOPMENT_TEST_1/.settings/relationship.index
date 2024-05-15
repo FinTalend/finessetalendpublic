@@ -250,10 +250,6 @@
     "version" : "Latest",
     "type" : "schema"
   }, {
-    "id" : "_FO3ewBHeEe-IVLttA5QFSQ - SpecialOffer",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
     "id" : "_FO3ewBHeEe-IVLttA5QFSQ - SpecialOfferProduct",
     "version" : "Latest",
     "type" : "schema"
