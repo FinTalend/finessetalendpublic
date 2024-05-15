@@ -1314,6 +1314,7 @@
     <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
     <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMSSqlInput"/>
     <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
@@ -1372,6 +1373,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="416" posY="576">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_4"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -1420,6 +1422,7 @@
     <elementParameter field="CHECK" name="STARTABLE" show="false" value="false"/>
     <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="false"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMSSqlOutput"/>
     <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
@@ -1521,11 +1524,10 @@
     <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tMSSqlInput"/>
     <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
     <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/MS_SQL_Server"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CHECK" name="START" show="false" value="true"/>
     <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
     <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMSSqlInput"/>
     <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
@@ -1614,7 +1616,6 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="416" posY="704">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_5"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -1693,7 +1694,6 @@
     <elementParameter field="CHECK" name="STARTABLE" show="false" value="false"/>
     <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="false"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMSSqlOutput"/>
     <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
@@ -3738,6 +3738,7 @@
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tMap_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tDBInput_5">
@@ -3746,11 +3747,11 @@
   </connection>
   <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tDBOutput_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
   </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tDBInput_5" offsetLabelX="0" offsetLabelY="0" source="tDBInput_5" target="tMap_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_5" offsetLabelX="0" offsetLabelY="0" source="tDBInput_5" target="tDBInput_6">
@@ -3759,7 +3760,6 @@
   </connection>
   <connection connectorName="FLOW" label="out2" lineStyle="0" metaname="out2" offsetLabelX="0" offsetLabelY="0" source="tMap_5" target="tDBOutput_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out2"/>
   </connection>
   <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tDBInput_6" offsetLabelX="0" offsetLabelY="0" source="tDBInput_6" target="tMap_6">
@@ -3925,13 +3925,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ce724d29-1781-4a93-aaaa-b7e4a6d2bd8b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kS2H7JMf8ZiscPP+pi8yZvRZvrUKptuH1TxHbLiqTWtcknRihO1H8//oAAjpyR53xtEifCRypa5B&#13;
-gg21q3JJCA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_13963dc7-124a-4f35-96f7-40d243b1bdd3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0jbdN5Tvt55bu5CO0LslNsDi5C+v88sIXiWFjBf/pE0M1Hb5h+QfPpgL9IaYdmrov6bPDqGdJb/j&#13;
-Af39SPWbmw==</DigestValue></Reference></SignedInfo><SignatureValue>U2k289geo+nhlEy1fdvqAeqeXTRo3MQWkLKFe5a4P8Ht8cDIVP19f7mV08A8fBHNG7IwfezXKThb&#13;
-OzldYEPSPgk050IcpkUGP0OAIeAyWBbyu0DuyMhFMYlrdEh9aqD/AB8xUBJEJCgzpqCPbcsbQ04h&#13;
-QZvRtnPfzK//xu27vKrh60SmhzcJPcuL1M4cpbS+T1uvzANVz88kZPCcMeXqw9m43eLGndTMdUn2&#13;
-c8/nd/AHj3iAKSnPjqGAn1+KQk+sG3l2qVATCw8w4B5q5PpUukbqRco+cTJykJ31NgCb+mCvHqJj&#13;
-FBArtmE2gu3e/uMui5lkyhX2RFdk8JMN5/gSrw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_054eaf63-9ced-4d24-95f6-fe86b8cd4bde"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vBWS2sIkQfqYwdie3ueJn/Po8sKmPOsGiHWgSZ8HvtTHe/25M9Yl61bXOxEq4d2zMJQn0XmWi3L8&#13;
+T/AZB9flfQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e510cac9-9a17-4623-8b0a-a149c1f73ca7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3fNZrVsplQ+nl0Z+AbAIAZQBNd4uhKHHXtXajx9PWsl/JSsyPLC+YOmx5qqLKBbBzxbPP2mrBbpf&#13;
+OI6WTRP8oQ==</DigestValue></Reference></SignedInfo><SignatureValue>p0VgYTAreZr2sSpFrvk6JAdqgacyvjoryiyewvW6ZSElWklY1cCJeG4dTBF9rfP4YtWnZEM7EhPf&#13;
+SPOh+bO6rCAgrYKIJg/wLbBr5/INvNt0n1ce8N5mrRFdp7ry/ii+3JdNr1uAq09eLRDRJuQCDRo2&#13;
+gxuUzzatMgvbFh1kk2/54xDVqfuyjUnmZr5TB/XvqgO3H1medujrHM+WyfnaVmdZK2gly+XhzGVO&#13;
+iplVVTEKdVaeysOyTRu9ujHXDHrvOOKAVQ4zCWusJxeLUz8Vey8pRFYAKqe0Cstkw5qTb6A/mxUs&#13;
+jMSteukMFpCYVr1VbuKo70pijCgWIJIcrozHxw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3953,4 +3953,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_13963dc7-124a-4f35-96f7-40d243b1bdd3" Target="#_ce724d29-1781-4a93-aaaa-b7e4a6d2bd8b"><Timestamp>2024-05-15 06:17:24</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e510cac9-9a17-4623-8b0a-a149c1f73ca7" Target="#_054eaf63-9ced-4d24-95f6-fe86b8cd4bde"><Timestamp>2024-05-15 06:18:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
