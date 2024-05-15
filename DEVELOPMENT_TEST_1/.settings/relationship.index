@@ -120,11 +120,11 @@
     "version" : "Latest",
     "type" : "property"
   }, {
-    "id" : "_FO3ewBHeEe-IVLttA5QFSQ - SalesOrderHeader",
+    "id" : "_FO3ewBHeEe-IVLttA5QFSQ - SalesOrderDetail",
     "version" : "Latest",
     "type" : "schema"
   }, {
-    "id" : "_FO3ewBHeEe-IVLttA5QFSQ - SalesOrderHeaderSalesReason",
+    "id" : "_FO3ewBHeEe-IVLttA5QFSQ - SalesOrderHeader",
     "version" : "Latest",
     "type" : "schema"
   } ]
