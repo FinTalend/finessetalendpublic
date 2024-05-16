@@ -264,6 +264,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="-50" offsetLabelY="0" posX="896" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="context.last_success = input_row.last_success;&#10;&#10;System.out.println(&quot;Last Success = &quot; + context.last_success);&#10;&#10;context.start_time = TalendDate.formatDate(&quot;yyyy-MM-dd hh:mm:ss&quot;, TalendDate.getCurrentDate()) ;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -286,6 +287,7 @@
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tJavaRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <subjob>
@@ -304,13 +306,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_59c96ce6-ee32-49fe-bd6f-7d995f395cad"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>i1Eaf0tXUea5/qZsyipcBUbLkjg+Txhkn457Q2D8AP+MG/7gl76kd7fk/hVuWi3OkmLs4HG5dYuh&#13;
-xyqypC1T5A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_dd3f2b74-eb11-406a-a1b4-9131170f6342"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7o4vQnoumPciwmiGzafJO5GOHijNl4NTyWxQ3BqBl/BoNtw2hEPQWS2TkOrP8Kw8cbgn6Rkbw+yV&#13;
-nIsV3O15Fw==</DigestValue></Reference></SignedInfo><SignatureValue>eITFEg/0DYzIbeiL2Fs3J0H2pfXXgJm9EQ+VXvPAhqMUnAtviI9M/Kt3zkqYMntYEJw7ZB4+/vld&#13;
-2iR4Xmt1gHEuRBdcK5x9XlFAEoFMjYiLtm+Ou7zs80TIo47Pf26NK7wU22qMGDYecr1YuRAVGiRl&#13;
-T7mxjq3wu0QPJjUJ/8VDPRsy/HlGwxe33OqY+2GW50D4Q/txFAovb4rJxkZykiSsmntqD+33GqO+&#13;
-ohURtbc1RYa2W1IU7AxR6N51pcIOHZT5j1WSYy4A9W+aitjg57uahpDoqoCyshrIYpnpYnuHPJal&#13;
-nFZxiDTXL3bo5aN8YpLqRoU9OhfyJ5fSXtcWHQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_64385efb-3c65-47ef-8789-cf67ef4e969e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5uJ9KuJhrwFwY9cBKlAR2iCalWH2bJp4hIA0GWFFrcbDU2ab3AUjob5jbxjSuWrBXlDgh9OFDQbB&#13;
+VmnffxFMgg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fbdff26d-3578-4502-b18b-10d451084956"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hXmN9ZFX94DQMr0yK6FGo4ktndzR7zsEoTUTOcEFv6EZZkiIBgohzkquRNgSLVyCznbfOUOOZanq&#13;
+E1lN/Vcfeg==</DigestValue></Reference></SignedInfo><SignatureValue>H1oo/Smx8MXJZE2uWBGu7AdjRYwnB/dLeJoyzFubeEQPCF/V6w4iiPob+IRDtdrP991b2lKHrix2&#13;
+iivnzoCH5v/pyce7FVA7fHObbxyK3TWNw2MRJ0Iw4SjGk8nJvhdW8KwJBzjyYwsZ3A35HeVKJGcn&#13;
+rQsgdD4cFVtCFgcUxTfE36hohQUDmyhiMWGaZApiGAkxamYpg55Ogx8RDki+vNv2rUxih0BRvaTb&#13;
+a4yM7Gt5XworLc9QVG2SdiJplVv7P/UjSJoMnWU+2r9KDJ+EiUuAgXio4SFApsPWISkz62gbH9MX&#13;
+l2yfUohGAhnAr7dxYOTW1FWRaL+HvxAPFEUyLA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -332,4 +339,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_dd3f2b74-eb11-406a-a1b4-9131170f6342" Target="#_59c96ce6-ee32-49fe-bd6f-7d995f395cad"><Timestamp>2024-05-16 10:31:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fbdff26d-3578-4502-b18b-10d451084956" Target="#_64385efb-3c65-47ef-8789-cf67ef4e969e"><Timestamp>2024-05-16 10:34:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
