@@ -218,6 +218,10 @@
     "type" : "job"
   },
   "relatedItems" : [ {
+    "id" : "__PuS4BH1Ee-IVLttA5QFSQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "_eD5nMBH1Ee-IVLttA5QFSQ",
     "version" : "Latest",
     "type" : "property"
@@ -239,10 +243,6 @@
     "type" : "schema"
   }, {
     "id" : "_eD5nMBH1Ee-IVLttA5QFSQ - Fact_SalesOrderHearderSalesReason",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_eD5nMBH1Ee-IVLttA5QFSQ - SalesFact",
     "version" : "Latest",
     "type" : "schema"
   } ]
