@@ -912,10 +912,6 @@
     "id" : "_eD5nMBH1Ee-IVLttA5QFSQ",
     "version" : "Latest",
     "type" : "property"
-  }, {
-    "id" : "_eD5nMBH1Ee-IVLttA5QFSQ - etl_control",
-    "version" : "Latest",
-    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
