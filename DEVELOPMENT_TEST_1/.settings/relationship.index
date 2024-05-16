@@ -123,10 +123,6 @@
     "id" : "_FO3ewBHeEe-IVLttA5QFSQ - SalesOrderDetail",
     "version" : "Latest",
     "type" : "schema"
-  }, {
-    "id" : "_eD5nMBH1Ee-IVLttA5QFSQ - SalesFact",
-    "version" : "Latest",
-    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
