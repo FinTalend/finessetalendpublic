@@ -247,8 +247,8 @@
       <column comment="" defaultValue="" key="false" length="5" name="OrderQty" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="ProductID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="SpecialOfferID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="19" name="UnitPrice" nullable="false" originalLength="-1" pattern="" precision="4" sourceType="MONEY" type="id_Object" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="19" name="UnitPriceDiscount" nullable="false" originalLength="-1" pattern="" precision="4" sourceType="MONEY" type="id_Object" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="UnitPrice" nullable="false" originalLength="-1" pattern="" precision="4" sourceType="MONEY" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="UnitPriceDiscount" nullable="false" originalLength="-1" pattern="" precision="4" sourceType="MONEY" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="38" name="LineTotal" nullable="false" originalLength="-1" pattern="" precision="6" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="36" name="SalesOrderDetailrowguid" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object" usefulColumn="true"/>
       <column comment="" key="false" length="23" name="SalesOrderDetailModDate" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
@@ -373,8 +373,8 @@
         <mapperTableEntries name="OrderQty" type="id_Short"/>
         <mapperTableEntries name="ProductID" type="id_Integer"/>
         <mapperTableEntries name="SpecialOfferID" type="id_Integer"/>
-        <mapperTableEntries name="UnitPrice" type="id_Object"/>
-        <mapperTableEntries name="UnitPriceDiscount" type="id_Object"/>
+        <mapperTableEntries name="UnitPrice" type="id_Integer"/>
+        <mapperTableEntries name="UnitPriceDiscount" type="id_Integer"/>
         <mapperTableEntries name="LineTotal" type="id_BigDecimal"/>
         <mapperTableEntries name="SalesOrderDetailrowguid" type="id_Object"/>
         <mapperTableEntries name="SalesOrderDetailModDate" type="id_Date"/>
@@ -1101,13 +1101,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8a7a0140-8565-4c04-87a2-5908983e7bce"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LlVor/PpE9NNjoZgWTtXDO5GBgLZJSsI9be4i2jRR33lSDsfOX1pws4ES1W4GBSCNHlVjtWudGcq&#13;
-aXsdIm87tQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_143e1e3a-865d-47eb-9fb7-d9a650d34f1e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SOkm7eunV0UqyOL2Ja7DgboKXmHg3UFcvk9TRxVPa9tCwPyaoVHbOJMjzRW6EE0A+Wpu/Hhjisww&#13;
-rKz/eHr8wg==</DigestValue></Reference></SignedInfo><SignatureValue>F6boWU0HXvayY1OGvI971xKJ57GkcySL21Z8mfrKGNDG0jBbnYuN3b/Fd7kgbH3OSosS3ptKef9y&#13;
-toaLKFQE5ThbAphTtc6tTd3KPaqPn7xO9lv1B3kTCDuLBfFmahXmsABW9WRm8YefXD1GgdK8ry+7&#13;
-X3oZ2WEw5EfhbVdRF5ADoN6DZyGy0onhOrDTFCqSZl2q+cvHNH1UOqE3UMpdGzQTuJMT+iSaI7YP&#13;
-/lfb64Geqqs/5P60DNR+kSh9nEIhGdjF4fxox3u6kG6DicOZWh05jkJQm6aaqrWxoudsu/EVMKs/&#13;
-6+AsIc4UWu9PZmiiCEKYsrORwZ/Qz/T2DFTWhg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8bb4c4df-bdc7-4193-a78e-81069574133d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ySIOoGzO49Jp+PBrfLUANgG8Db1TogaC2Qq3aPEj5BYIySWWz8IFFQlYHcfxvc6rzXeAFQnRYWld&#13;
++Soz38s/Pg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d303000d-c068-4042-a694-ce3dc00e6280"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>p78OScTyaGvKbQbkJeDzrVJkEtAvJ8z5oTOHmexBnZeF0bHDBaVS4f96gCa+0XaUbDOVTTPI00Px&#13;
+0qQ0Dym2Mw==</DigestValue></Reference></SignedInfo><SignatureValue>CCJAboVJiNjb9qh+Iq4hPsFVaJ8r7/+7kT0NSn1xsMTfOb/iua1J8Q+IM5O9fNeAb0x/FYuYmv0Q&#13;
+XKpv/AbscwkOnPBHsUfv0xYAF0IcqFKkZtQR8H1+SY2zoSlpENPBDb6FWbW42C7GGlqVQ1yM7v7f&#13;
+xgfXR3ZW+8Y2Lkxyy6x/8jOdG3trYm5hF68n9CykoLHcro/q0elS03Kd1MyOkOO2Z4LhnrGo3/o+&#13;
+WRPH63ICKxoKMnXAcnlTd49KzyIyyh8oMVTE38ebAPiDKVlQQnL+cYdjzNUbMPcsYP1fOB66JNQ3&#13;
+vGHH2i9zgrlPhVhOpnJwT98uPTO3M2ON9T5Tpg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1129,4 +1129,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_143e1e3a-865d-47eb-9fb7-d9a650d34f1e" Target="#_8a7a0140-8565-4c04-87a2-5908983e7bce"><Timestamp>2024-05-16 06:14:24</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d303000d-c068-4042-a694-ce3dc00e6280" Target="#_8bb4c4df-bdc7-4193-a78e-81069574133d"><Timestamp>2024-05-16 06:15:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
