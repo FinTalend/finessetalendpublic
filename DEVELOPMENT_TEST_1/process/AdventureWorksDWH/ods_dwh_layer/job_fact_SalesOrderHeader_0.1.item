@@ -625,8 +625,8 @@
     <elementParameter field="TEXT" name="LABEL" value="Adventurework_DB_Source"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
-      <column comment="" key="false" length="-1" name="SalesOrderHeaderKey" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="true" length="10" name="SalesOrderID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="SalesOrderHeaderKey" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="SalesOrderID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="3" name="RevisionNumber" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="TINYINT" type="id_Short" usefulColumn="true"/>
       <column comment="" key="false" length="23" name="OrderDate" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="23" name="DueDate" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
@@ -654,8 +654,8 @@
       <column comment="" key="false" length="23" name="ModifiedDate" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="-1" name="SalesOrderHeaderKey" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="true" length="10" name="SalesOrderID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="SalesOrderHeaderKey" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="SalesOrderID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="3" name="RevisionNumber" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="TINYINT" type="id_Short" usefulColumn="true"/>
       <column comment="" key="false" length="23" name="OrderDate" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="23" name="DueDate" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
@@ -818,13 +818,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_02775fce-917c-47d6-862e-8bc8896c7854"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>eMIFE4JEWCPscTKG8fk/qwVaMvi/g4A5T5KPZsBkD2imKxfrNG/ef02/LpJgPDo+U8t1pc9N/Btg&#13;
-sOHvyp0a1Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_03059346-8ad3-4805-96a2-e45bc8c7ff97"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>CsX3rLhJ5ZOd+QuEp3r8FmEPkRUKSBKBBkXvqW2c7KuJ1sUi3kyiWJsZ5wqrpK+j/5s8ZKIMEehI&#13;
-xFbSfG1SqQ==</DigestValue></Reference></SignedInfo><SignatureValue>cWbsWWxBLoxG9DVl0ENLUmhua54BDFTMD1fMiI1tqn098WB8QfOaC5Lhz40n+6wxJzVSrAcrLBcr&#13;
-63N6R+zBN2phNAjoLzkhm36qH9M7IdY9eonxjiHsJcuY4O925EM5xxxDSpdPxF4AUUo2TfemIHf3&#13;
-nUh1vJvx/jEGiOAgNQvFxAQfJFbrwWZgMDVJvFNOHOErRQDFo8wfYzzEx0P2B2WwogDoZsidE+K9&#13;
-t8Wsm1dVc/UI9Oj9NaxbLP9TbD/pLwAldsSI69nCF8kqn+HUU6URq9wJ4bNaS9XF/zoD3tsnZ5Ck&#13;
-paFl9DJvDUhjZtuu1ZndZFeQ3jdqgOV3pfLdLw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ec3b09a6-7cbb-49a2-953d-dbb4b887c9f5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JaYpfYqPnA3lL1gnxxXTLOHhTrHV+e9Baf9Nr7OoDy3oSL5NDZtE3NuDQb7tjFHcZCDrZDSx2fJQ&#13;
+kMZ4hnljMA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ec5d7fc1-ee16-4503-9178-8bc917a78ebe"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9D+q52AcbIHNbfchlJuNIjwXE/nrUctpyJVsQxClj0RsvV6ZUDd8aUOy6kELZdhcvBqtlkXwGqBK&#13;
+PmmO9PKF/w==</DigestValue></Reference></SignedInfo><SignatureValue>BdQVUkiXLiiQsXO4SlSS8+t0J+Uv2/j0Q1PFm0nr8laH5KaCzLk5tueWn3qDAhZRk2kSU3PLgxUA&#13;
+QBmLVJI/mPu2E4bHsICXhzb3bWyreSdCfhpZWYUCPeLzGrY5uPonOHgI89QHUvduAo62+ULnPGCs&#13;
+LhjCOTqGCK0FkdPNjbTptDON0bDhIFxIYjDlzNNCNzlYFbYgx8rUvnCunCaLfSjpHxN4hcKEd4+9&#13;
+q2MDLw5fzICLd20w1C3gpELdOjvyefmABwkdGYo/CC/y0BZjaKPstAcukh/HOnNpvTstV0AV8mQ8&#13;
+xVeHBYp0k1PPp0xhP7sYHQSfXdmwbqr3jv0HvQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -846,4 +846,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_03059346-8ad3-4805-96a2-e45bc8c7ff97" Target="#_02775fce-917c-47d6-862e-8bc8896c7854"><Timestamp>2024-05-20 12:39:43</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ec5d7fc1-ee16-4503-9178-8bc917a78ebe" Target="#_ec3b09a6-7cbb-49a2-953d-dbb4b887c9f5"><Timestamp>2024-05-20 12:40:30</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
