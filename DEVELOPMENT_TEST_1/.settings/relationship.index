@@ -920,9 +920,21 @@
     "version" : "Latest",
     "type" : "context"
   }, {
+    "id" : "_FO3ewBHeEe-IVLttA5QFSQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "_eD5nMBH1Ee-IVLttA5QFSQ",
     "version" : "Latest",
     "type" : "property"
+  }, {
+    "id" : "_FO3ewBHeEe-IVLttA5QFSQ - SalesOrderHeader",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_eD5nMBH1Ee-IVLttA5QFSQ - etl_control",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
