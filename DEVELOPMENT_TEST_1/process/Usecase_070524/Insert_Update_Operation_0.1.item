@@ -100,16 +100,6 @@
   </parameters>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tMysqlInput"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/MySQL"/>
-    <elementParameter field="CHECK" name="START" show="false" value="true"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMysqlInput"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_NHs9YAbUEe-IF9wN5gC7sA"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
@@ -270,15 +260,6 @@
   </node>
   <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tMysqlOutput"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/MySQL"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="false"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMysqlOutput"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_6cui8ACnEe-X49Sz61C57A"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
@@ -401,15 +382,6 @@
   </node>
   <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tMysqlOutput"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/MySQL"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="false"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMysqlOutput"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_6cui8ACnEe-X49Sz61C57A"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
@@ -532,15 +504,6 @@
   </node>
   <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_3"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tMysqlOutput"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/MySQL"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="false"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMysqlOutput"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_6cui8ACnEe-X49Sz61C57A"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
@@ -627,13 +590,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9fc2f2a5-e522-491a-82cf-c10b6c7fdd11"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LZ+E4ypEpB/q1adphlHNThYxZUUCQdyxNfTAVCqzc8kvZZ+VtnV3IShdFCIledkKNFdq2ZboI83i&#13;
-Qso6qA49Cw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_168f5079-bd69-45d7-947d-a7a17f720bbb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>w/rkNzwKLBEJRZqYs9UcrudxV66x1hO4cw7T8ecuSPOF2KDi1CM8t5IDsmFW0TyiXnuHPJoG8srx&#13;
-cRXLTwTtrw==</DigestValue></Reference></SignedInfo><SignatureValue>dPVE3bdROqdAY6wqQfwCD1N//e5Ws1L+/re6cl8G4q+Y87IPAgi+hJaCx9KhKOL4ItI7EY4J0sIS&#13;
-kxDZtXVDB88+B9lsDjcxkOorFuj0zABp/kC8jxis2GuDQXXPWomE4YG0voEB1d5sUHYq0gqg8kuZ&#13;
-XKmLQ33nCQGkAMIFHCVTVQXwHMQM+AIkTcSzNjW8TB7fU9a+V+6jKSa/DMbbyOKFtbTCoyIEHtN7&#13;
-kR5TQdbJ4/zwbhEocihOSOvaO23WjkZ6xf5zIWVyRWAWbnxWbIbsB8W3mLBXbEcwUJdX9HtOJeuu&#13;
-SyXN3mzSIDMtwNqd4Ka4NMbDv36aW6lOQDy/Lw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ef592882-b3ae-4f8b-bc66-e076cd363309"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tCYN0YJIBdqe0ZK0UuwbllP+q2T4VKmsCfjwP6smw5VYxb8KIa33Yf7XWtCGgCWahU/cgGC7ayZP&#13;
+YSCm1NLlQg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5f2b96ff-3d8a-41cb-b221-4f5a4c8adabe"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zSlEK/kF2XQJKLZsovzFq9ZAVJrv2a/IW2MBJjPj6XNqWAhV/hBkm27ZHSC1pipgvnYb6ZuUHYqZ&#13;
+0uifD2mUQg==</DigestValue></Reference></SignedInfo><SignatureValue>Cu8bhy6zU/LersqROglojSMmqDVgFTnljblBMa7Ahf+mzF2LRig4ZgFyf22TVs6s1t4DUYOiHy+E&#13;
+HuOWBwnYsbo+4uyP3CaIiYvr0pxxEp8YCsU4BHp0wD6iP46N0QOTUtDmLSISyb3VWuSBaTayquuf&#13;
+RPVfEwdk/hsXzDi6aWFWmqWIJw3+ocfmQBJHx1Ye1B83niKifjSiYeYSglZtGF61gZuaxgc0h3wV&#13;
+VajUg1ol7haOwbPcS402x0rMmTWMQ5nTBn8DhAXwZCfXE4I6HtrEs0rhain05piLTs6CHgCRPUjs&#13;
+hXWpkvIx7s1NrQJvkxLfp83Va2LF1yYARrT5sA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -655,4 +618,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_168f5079-bd69-45d7-947d-a7a17f720bbb" Target="#_9fc2f2a5-e522-491a-82cf-c10b6c7fdd11"><Timestamp>2024-05-09 08:02:02</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5f2b96ff-3d8a-41cb-b221-4f5a4c8adabe" Target="#_ef592882-b3ae-4f8b-bc66-e076cd363309"><Timestamp>2024-05-21 10:52:20</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
