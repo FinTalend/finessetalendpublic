@@ -279,23 +279,7 @@
     "version" : "Latest",
     "type" : "schema"
   }, {
-    "id" : "_FO3ewBHeEe-IVLttA5QFSQ - CurrencyRate",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_FO3ewBHeEe-IVLttA5QFSQ - Customer",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
     "id" : "_FO3ewBHeEe-IVLttA5QFSQ - SalesOrderHeaderSalesReason",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_FO3ewBHeEe-IVLttA5QFSQ - SalesPerson",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_FO3ewBHeEe-IVLttA5QFSQ - SalesPersonQuotaHistory",
     "version" : "Latest",
     "type" : "schema"
   }, {
