@@ -809,11 +809,11 @@
     <elementParameter field="TEXT" name="USER" value="&quot;Sqluser2&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:kgUjEY/D3OC8HapgcoCHTGOmizLtSbS7MxNxwAvdUHV0UOslLcCwbPwrsg=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;DimProduct&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
-    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" show="false" value="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" value="false"/>
     <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="ProductKey"/>
     <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
     <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
@@ -1272,11 +1272,11 @@
     <elementParameter field="TEXT" name="USER" value="&quot;Sqluser2&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:c6MBODaEAuihM67cM3ZY67ZMuyNe/vnFq9ScqbvuIcJB8tFVIhQ0W+JEdw=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;DimProductCategory&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
-    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" show="false" value="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" value="false"/>
     <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="ProductKey"/>
     <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
     <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
@@ -1514,11 +1514,11 @@
     <elementParameter field="TEXT" name="USER" value="&quot;Sqluser2&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:bsj1sNysa/viD17R4oo7W+MBVV50e6najKihh4b6JJy4M5eOcJSVZdwn8g=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;DimProductSubCategory&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
-    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" show="false" value="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" value="false"/>
     <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="ProductKey"/>
     <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
     <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
@@ -1708,13 +1708,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_65ea2412-b5eb-4e9d-92bd-59685fc7e5e9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>50psQ7Cquyc6IIF0J6G4NzGfcTaF14QI1Mo8TGTLFoI3bdQzVZZsxmaX52evxnturZwZ7KAh7Vd2&#13;
-GkyQmWyfWQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d52b72be-0f0f-40c9-bcbf-e2a95dd87f8e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>U7OcH+3AVg+vUQ5QJckViGwQrKuXvLmi3IHbiIk9N6ED7uAAiIaWMQ/68v1bWWUgTpubO8kZzGcd&#13;
-s4mZuKKLOA==</DigestValue></Reference></SignedInfo><SignatureValue>R5oWKzN1ZarjLOpZPnxOZxZUOCVhUfioJN/PvHh3UnlomBSfg4Y7Rc21esM1OBbrOuoo+ZXtAgej&#13;
-kkock/Lsz7la53Mx5h3kjV0PNysbIsooDREtXGD4IAbCq5SUZduF29FJcEXym+12qhpVdlsnNh4t&#13;
-HUlPXbMiQZLMrXVHoQZ3nRLOddzVfofJvAbK2vTLF3RhjKW4lCY3QWHowHzC49VfFg3b2BgV07Ug&#13;
-yT4ZIx+OVkT/s0RoLhMvUt/RqyHQVGwRgem7H6K5ipcReFO/LNlW/CiiZrlk4vcuzIRQ3IA/w/U6&#13;
-UvUeF2U2jVM4/OeV9sJOBzrCqS063z/sR8eVLA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_59a1f042-5433-4d26-93f3-86916e89032c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7nZ9G8askbucA5AB8MZQq16NBa5fWpP5SrkWFviNTY7d63412LLgokk/q1oCW5QnIF4+tV64dMKZ&#13;
+olQ0CCLV+g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d15fd43d-5dd5-4bd3-be2d-40f9040e21bf"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LhG6/dAtyM/nYeMdg7BQRTVoqVkW8Qlivx8Q9YU5kzVAKZfiOg5Yvy9t8pSA0fbtQYcAj8SscPVB&#13;
+jIv3qUVSlQ==</DigestValue></Reference></SignedInfo><SignatureValue>JDSkJ9LjjtWjP/H2kvu/MLLcvpsCofP/f7sLJ1/rAT4N/RBAA75uHqCxJO0d7x3yCpnkchvJx/AB&#13;
+ctD3n8MW3hoy2AuR7ZW2l3abTSmZhJsKim7ZnrYE23ioArknCAcnzOd0CZ0oEajlxyIjbfl/so+p&#13;
+P3lRYFJTQyetyWxj1DM30PJAGRbqqTHwcxLH/kzqmXENf03j/N2zomQoFyHqcV08F/d318Ae6sXC&#13;
+CJ2dXw2kEeEG3HiMYzQ7yv2nCP8aZb9p71kY8f7saH1wd+y2RJPV+aUU/vNgetojAcR/84ogtKUu&#13;
+L0YA3NUkJmElhV8zLP9vLuUwGDnsXhvV4o7rvw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1736,4 +1736,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d52b72be-0f0f-40c9-bcbf-e2a95dd87f8e" Target="#_65ea2412-b5eb-4e9d-92bd-59685fc7e5e9"><Timestamp>2024-05-23 06:58:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d15fd43d-5dd5-4bd3-be2d-40f9040e21bf" Target="#_59a1f042-5433-4d26-93f3-86916e89032c"><Timestamp>2024-05-23 07:00:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
