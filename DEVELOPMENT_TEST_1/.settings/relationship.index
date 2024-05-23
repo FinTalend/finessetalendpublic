@@ -677,11 +677,27 @@
     "version" : "Latest",
     "type" : "property"
   }, {
+    "id" : "_ZJhrkBdeEe-IVLttA5QFSQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "_eD5nMBH1Ee-IVLttA5QFSQ",
     "version" : "Latest",
     "type" : "property"
   }, {
     "id" : "_FO3ewBHeEe-IVLttA5QFSQ - SalesPerson",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_ZJhrkBdeEe-IVLttA5QFSQ - Product",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_ZJhrkBdeEe-IVLttA5QFSQ - ProductCategory",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_ZJhrkBdeEe-IVLttA5QFSQ - ProductSubcategory",
     "version" : "Latest",
     "type" : "schema"
   } ]
