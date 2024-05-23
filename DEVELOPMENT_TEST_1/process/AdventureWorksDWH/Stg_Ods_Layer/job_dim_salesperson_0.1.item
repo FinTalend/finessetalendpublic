@@ -1297,7 +1297,7 @@
       <column comment="" key="false" length="10" name="ProductCategoryID" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="50" name="Name" nullable="false" pattern="" precision="0" sourceType="NAME" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="100" name="Name" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="'newid()'" key="false" length="36" name="rowguid" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object" usefulColumn="true">
@@ -1312,7 +1312,7 @@
       <column comment="" key="false" length="10" name="ProductCategoryID" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="50" name="Name" nullable="false" pattern="" precision="0" sourceType="NAME" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="100" name="Name" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="'newid()'" key="false" length="36" name="rowguid" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object" usefulColumn="true">
@@ -1528,7 +1528,7 @@
       <column comment="" key="false" length="10" name="ProductCategoryID" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="50" name="Name" nullable="false" pattern="" precision="0" sourceType="NAME" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="Name" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="'newid()'" key="false" length="36" name="rowguid" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object" usefulColumn="true">
@@ -1546,7 +1546,7 @@
       <column comment="" key="false" length="10" name="ProductCategoryID" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="50" name="Name" nullable="false" pattern="" precision="0" sourceType="NAME" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="50" name="Name" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="'newid()'" key="false" length="36" name="rowguid" nullable="false" pattern="" precision="0" sourceType="UNIQUEIDENTIFIER" type="id_Object" usefulColumn="true">
@@ -1651,13 +1651,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b8ff9c0e-b770-4a77-b1de-be690d8875b7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6v43anM6ZpOE5iY6y4iC+7k550zdAPE6m52NnLOt2lhPI0E586JWORSmY57irGMYcxBTPJ26fxzK&#13;
-HqjwCe+jbg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6ce3d142-07f5-4d01-bdb1-9a6f6cafd54d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kdrsqcuf7i8h1gnYlrmdleWpPPr4Jkv+mU2JFc8NTknECLpjQHVK6QWMcskMjtSmZvu2vnLyXzN9&#13;
-kZztLc/MEg==</DigestValue></Reference></SignedInfo><SignatureValue>C57d3My6L2NXxRwdDolGW6zy8d3+lWgZNbOvibJoIRfY/Z+AcKp8rJURGZzD0NJB4Cels6RjMphP&#13;
-DadsXjsBmgn8s0fGBUnW1nNg2suLsfBxOXwewoi2dd9HEvbhVQPy6ucHA0vAYLnSbCYnGeKirDNO&#13;
-tXdj2B4tL5i0g87R0END+IGRusGkMF/cnH9/6UGudSq5coFE39iPd+38c1x7XiJosHF45VFLn7MJ&#13;
-K0dmD+PzCuQvh+vQ6PHTLMMw6sH0aPAxA9tqYxSkEtadKaqcVhZSwVefRmELPWTR8lZAJ7nLixsr&#13;
-Yggfjvv2Q/HeuJ+oZttSNHYHPu7AJcf8c8SL8A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_db6766af-bf00-4072-936d-13fc7128f246"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PIc6ScsqFPB+3mQWfI0oStPMLozP/2hEl4w9z5bnl7bF0xov5clcExUGIM5HUW1Azt5SrhBndDD3&#13;
+J06XhsDGtQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8805b57c-1102-439a-b3dc-12a7b98bf73c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fnrQQEbjl4n7dDf5J+4ap09Sg8U0TfjML1HBMJ9zTNR8pTdlrzK9zD55WVj32+1k+f9NkY3WGHp2&#13;
+ntX87u2aQg==</DigestValue></Reference></SignedInfo><SignatureValue>HuGNeBXbTfbrBgs3KvZeI6O7V4/HO44XdcMM904KCrWL95ZI351Xctqrky2A447p7bD8XaD/r19T&#13;
+2iQ8icCa7ehyFCR/CEe+/FytrIIb8IBodeqFtiQwaNpC9CU63Wqi5ffWdttMcB/T+EW5CAUjNpmf&#13;
+f2CRbuPgYf+zKD308xLJQdEIb5gO4zTbKelj5rP6nLR5McOUAwH9Z3forqBkqp1apdJZBEiDz7Xt&#13;
+LKuJUqNyvId1YCMEIh0pLXlCGf/1J1by3JWb1cvAPReEBC+jx98En9RVLsYJcl9VCFND84ViaMsh&#13;
+skYnqY7rlEo6KRT1276jQ0ZsVJLPHZWjXBNjAw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1679,4 +1679,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6ce3d142-07f5-4d01-bdb1-9a6f6cafd54d" Target="#_b8ff9c0e-b770-4a77-b1de-be690d8875b7"><Timestamp>2024-05-23 07:18:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8805b57c-1102-439a-b3dc-12a7b98bf73c" Target="#_db6766af-bf00-4072-936d-13fc7128f246"><Timestamp>2024-05-23 07:21:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
