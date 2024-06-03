@@ -229,6 +229,10 @@
     "type" : "job"
   },
   "relatedItems" : [ {
+    "id" : "_FO3ewBHeEe-IVLttA5QFSQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "__PuS4BH1Ee-IVLttA5QFSQ",
     "version" : "Latest",
     "type" : "property"
@@ -236,6 +240,10 @@
     "id" : "_eD5nMBH1Ee-IVLttA5QFSQ",
     "version" : "Latest",
     "type" : "property"
+  }, {
+    "id" : "_eD5nMBH1Ee-IVLttA5QFSQ - DimDate",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
